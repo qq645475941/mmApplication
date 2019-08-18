@@ -1,0 +1,105 @@
+.notification{
+  padding: 30rpx;
+}
+.listTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headIcon image{
+  width: 44rpx;
+  height: 44rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.listTop view:last-child{
+  font-size: 20rpx;
+  color: #999999;
+  
+}
+.msg{
+  line-height: 66rpx;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 5px #f1f1f1;
+  border-radius: 20rpx;
+  width: 100%;
+}
+.listL{
+ flex: 1;
+}
+.listL image{ 
+  width: 200rpx;
+  height: 140rpx;
+  border-radius: 20rpx;
+}
+.listR{
+  flex: 3;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+  display: flex;
+  align-content: space-between;
+  flex-flow: wrap;
+  box-sizing: border-box;
+}
+.listR view:first-child{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 24rpx;
+}
+.lRBot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.lRBot view{
+  color: #ff606f;
+}
+.lRBot button{
+  width: 120rpx;
+  height:40rpx;
+  border-radius: 20rpx;
+  background-color: #ff606f;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+}
+.lRBot button[disabled]{
+  background-color: #cccccc;
+  color: #fff;
+}
+.time{
+  color: #999999;
+  line-height: 40rpx;
+  text-align: left;
+  font-size: 20rpx;
+}
+
+
+.noneData{
+  position: fixed;
+  top: 36%;
+  left: 0;
+  margin: auto;
+  right: 0;
+  text-align: center;
+  height: 40px;
+}
+.noneData view:first-child{
+  color: #999999;
+  font-size: 24rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.noneData view:last-child{
+  color: #999999;
+  font-size: 24rpx;
+}

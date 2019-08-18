@@ -1,0 +1,135 @@
+.header{
+  height: 110rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  0 30rpx;
+}
+.headTxt{
+  font-size: 36rpx;
+  color: #131313;
+  font-weight: bold;
+}
+.search{
+  width: 524rpx;
+  height: 72rpx;
+  border-radius: 72rpx;
+  background-color: #ebebeb;
+  text-align: center;
+  line-height: 72rpx;
+  color: #999999;
+}
+.search image{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+  margin-right: 16rpx;
+}
+.notification image{
+  width: 38rpx;
+  height: 40rpx;
+}
+.notification view{
+  color: #131313;
+  font-size: 20rpx;
+  font-weight: bold;
+}
+
+swiper{
+  margin: 30rpx;
+  margin-top: 24rpx;
+  height: 300rpx;
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.enter{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 24rpx;
+  color: #131313;
+  padding: 0 30rpx;
+}
+.enterList image{
+  width: 42rpx;
+  height: 42rpx;
+  margin-bottom: 20rpx;
+}
+.title{
+  font-size: 28rpx;
+  margin: 30rpx;
+}
+.title text{
+  display: inline-block;
+  width: 6rpx;
+  height: 30rpx;
+  border-radius: 4px;
+  background-color: #ff606f;
+  margin-right: 10rpx;
+  vertical-align: middle;
+  margin-top: -4rpx;
+}
+
+
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30rpx;
+  background-color: #fff;
+  box-shadow: 0 0 5px #f1f1f1;
+  border-radius: 20rpx;
+}
+.listL{
+ flex: 1;
+}
+.listL image{
+  width: 240rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.listR{
+  flex: 3;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+  display: flex;
+  align-content: space-between;
+  flex-flow: wrap;
+}
+.listR view:first-child{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.lRBot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.lRBot view{
+  color: #ff606f;
+}
+.lRBot button{
+  width: 120rpx;
+  height:40rpx;
+  border-radius: 20rpx;
+  background-color: #ff606f;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 40rpx;
+}
+.lRBot button[disabled]{
+  background-color: #cccccc;
+  color: #fff;
+}
+.time{
+  color: #999999;
+  line-height: 60rpx;
+  text-align: left;
+}

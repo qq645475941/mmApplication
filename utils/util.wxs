@@ -1,0 +1,23 @@
+function formatBankNumber(bankNumber,n) {
+  bankNumber = '' +bankNumber+'';
+  var a = '';
+  if(n){
+    for(var i=0;i<n;i++){
+      a+='*';
+    }
+  }else{
+    a = '****';
+  }
+  if (bankNumber.length > 8) {
+    return bankNumber.slice(0, 4) + a + bankNumber.slice(-4);
+  } else {
+    return bankNumber;
+  }
+}
+function getTimeStr(){
+  return Date.now();
+}
+module.exports = {
+  formatBankNumber: formatBankNumber,
+  getTimeStr: getTimeStr
+}

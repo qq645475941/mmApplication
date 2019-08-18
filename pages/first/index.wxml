@@ -1,0 +1,26 @@
+<!-- <wxs src="../../utils/util.wxs" module="util" /> -->
+<view wx:if="{{versionState != 1}}" class='toggle'>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:key="item" wx:for="{{items}}">
+      <radio value="{{item.id}}" checked="{{false}}" color='#528af0' /> {{item.name}}
+    </label>
+  </radio-group>
+  <button class='' bindtap='selectVersionState'>确定</button>
+</view>
+<block wx:if='{{ifDw}}'>
+  <view class='dw' bindtouchmove='stopTouchMove'>
+    <image class='dw1' src='https://56yc-oss.oss-cn-shanghai.aliyuncs.com/201906/dw1.png' bindload='dwImgLoad' binderror='dwImgerr'></image>
+    <image class='dw2' src='https://56yc-oss.oss-cn-shanghai.aliyuncs.com/201906/dw2.png' bindload='dwImgLoad' binderror='dwImgerr'></image>
+    <image class='dw3' src='https://56yc-oss.oss-cn-shanghai.aliyuncs.com/201906/dw3.png' bindload='dwImgLoad' binderror='dwImgerr'></image>
+    <image class='dw4' src='https://56yc-oss.oss-cn-shanghai.aliyuncs.com/201906/dw4.png' bindload='dwImgLoad' binderror='dwImgerr'></image>
+    <image class='dw5' src='https://56yc-oss.oss-cn-shanghai.aliyuncs.com/201906/dw5.png' bindload='dwImgLoad' binderror='dwImgerr'></image>
+    <view class='countDown' wx:if='{{countDownShow}}' bindtap='jump'>{{countDown}} 跳过</view>
+  </view>
+</block>
+<block wx:else>
+  <view class='pic'>
+    <image src='/images/others/indexLog.png'></image>
+  </view>
+  <view class='text' style='bottom:10%'>物泊56找货</view>
+  <button class='default_bottom_btn' hidden='{{btnHidden}}' bindtap='reloadGetWxLoginInfo'>进入首页</button>
+</block>

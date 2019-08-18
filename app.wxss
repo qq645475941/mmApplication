@@ -1,0 +1,245 @@
+
+page{
+    background-color: #fafafa;
+    font-size: 28rpx;
+    /* font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif; */
+}
+.page__hd {
+    padding: 40px;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page__ft{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
+}
+view{
+  color: #131313;
+  font-size: 28rpx; 
+}
+input{
+  font-size: 28rpx;
+  width: 100%;
+}
+button{
+  padding: 0;
+  margin: 0;
+  margin-left:0;
+  margin-right:0;
+  padding-left:0;
+  padding-right:0;
+  border: none;
+  outline: none;
+  border-radius: 0;
+}
+button::after {
+  border: 0;
+  outline:0 ;
+}
+image{
+   vertical-align: middle; 
+}
+.loadEnd{
+  text-align: center;
+  color: #999;
+  padding: 5px 0;
+}
+.default_bottom_btn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #ff606e;
+  z-index: 2;
+  border-radius: 0;
+  font-size: 30rpx;
+}
+.default_btn{
+  height: 88rpx;
+  background-color: #ff606e;
+  color: #fff;
+  line-height: 88rpx;
+  /* width: 640rpx; */
+  margin: 0 26rpx;
+  margin-top: 48rpx;
+  font-size: 32rpx;
+  border-radius: 3px;
+}
+.default_outline_btn{
+  height: 88rpx;
+  border:1px solid  #ff606e;
+  border-radius: 3px;
+  color: #ff606e;
+  line-height: 88rpx;
+  width: 640rpx;
+  margin: 0 auto;
+  margin-top: 48rpx;
+  font-size: 32rpx;
+  background-color: #edf1f8;
+}
+
+.version{
+  width: 100%;
+  position: fixed;
+  bottom: 70rpx;
+  font-size: 22rpx;
+  color: #bdc0cb;
+  text-align: center;
+}
+
+
+.arrow{
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+  transform: rotate(45deg);
+}
+
+.trigon{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #ccc;
+    border-left: 10px solid transparent;
+}
+
+/* 公用链接跳转栏 */
+/* <view class='com_link'>
+  <view> <image src='/images/others/card_map.png' style='width:30rpx;height:30rpx;'></image>附近消费点</view>
+  <view class='arrow'></view>
+</view> */
+.com_link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  border-bottom: 1px solid #edf1f8;
+  padding:0 25rpx;
+  background-color: #fff;
+}
+.com_link view:first-child{
+  color: #333;
+  font-size: 30rpx;
+}
+.com_link image{
+  margin-right: 4px;
+  margin-top: -3px;
+}
+
+
+.qi{
+  display: inline-block;
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 22rpx;
+  font-weight: normal;
+  background-color: #43c1a6;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.zhong{
+  display: inline-block;  
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 22rpx;
+  font-weight: normal;
+  background-color: #ff8540;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+
+.weui-loadmore {
+  width: 65%;
+  margin: 1.5em auto;
+  line-height: 1.6em;
+  font-size: 14px;
+  text-align: center;
+}
+
+.weui-loadmore__tips {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.weui-loadmore_line {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 2.4em;
+}
+
+.weui-loadmore__tips_in-line {
+  position: relative;
+  top: -.9em;
+  padding: 0 0.55em;
+  background-color: #edf1f8;
+  color: #999;
+}
+
+/* 暂无数据 */
+
+/* <view class='noneData'>
+  <view class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+  </view>
+</view> */
+
+
+/* <view class='loadEnd'>已经到底啦~</view> */
+
+
+.pin{
+  width:30rpx;
+  height:30rpx;
+  border-radius:50%;
+  border:1px solid #528af0;
+  color:#528af0;
+  font-size:22rpx;
+  display: inline-block;
+}
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfix{zoom:1}
+
+.title{
+  font-size: 28rpx;
+  margin: 30rpx;
+}
+.title text{
+  display: inline-block;
+  width: 6rpx;
+  height: 30rpx;
+  border-radius: 4px;
+  background-color: #ff606f;
+  margin-right: 10rpx;
+  vertical-align: middle;
+  margin-top: -4rpx;
+}

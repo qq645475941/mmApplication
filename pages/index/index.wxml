@@ -1,0 +1,89 @@
+<view class="header">
+  <view class="headTxt">首页</view>
+  <view class="search" bindtap="toSearch"><image src="/images/others/search.png"></image>搜索精彩活动</view>
+  <view class="notification" bindtap="toNotification">
+    <view><image src="/images/others/notification.png"></image> </view>
+    <view>通知</view>
+  </view>
+</view>
+
+<swiper 
+  indicator-dots="{{indicatorDots}}"
+  indicator-color="{{indicatorColor}}"
+  autoplay="{{autoplay}}" 
+  interval="{{interval}}" 
+  duration="{{duration}}"
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="enter">
+  <view class="enterList" bindtap="toActive">
+    <view><image src="/images/others/rili.png"></image> </view>
+    <view>活动日历</view>
+  </view>
+  <view class="enterList">
+    <view><image src="/images/others/shoucang.png"></image> </view>
+    <view>活动收藏</view>
+  </view>
+  <view class="enterList">
+    <view><image src="/images/others/scan.png"></image> </view>
+    <view>扫描二维码</view>
+  </view>
+  <view class="enterList">
+    <view><image src="/images/others/qiandao.png"></image> </view>
+    <view>签到</view>
+  </view>
+</view>
+
+<view class="title"><text class="bar"></text>最新活动</view>
+
+<!-- 列表 -->
+<view class="list">
+  <view class="listL"><image src="/images/others/demo.jpg"></image></view>
+  <view class="listR">
+    <view>【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~</view>
+    <view class="time">2019-08-02  至  2019-08-02</view>
+    <view class="lRBot">
+      <view>免费</view> 
+      <button>立即参加</button>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <view class="listL"><image src="/images/others/demo.jpg"></image></view>
+  <view class="listR">
+    <view>【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~</view>
+    <view class="time">2019-08-02  至  2019-08-02</view>
+    <view class="lRBot">
+      <view>免费</view> 
+      <button>立即参加</button>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <view class="listL"><image src="/images/others/demo.jpg"></image></view>
+  <view class="listR">
+    <view>【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~</view>
+    <view class="time">2019-08-02  至  2019-08-02</view>
+    <view class="lRBot">
+      <view>免费</view> 
+      <button>立即参加</button>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <view class="listL"><image src="/images/others/demo.jpg"></image></view>
+  <view class="listR">
+    <view>【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~</view>
+    <view class="time">2019-08-02  至  2019-08-02</view>
+    <view class="lRBot">
+      <view>免费</view> 
+      <button>立即参加</button>
+    </view>
+  </view>
+</view>

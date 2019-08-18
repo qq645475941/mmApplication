@@ -1,0 +1,38 @@
+<view class="search">
+  <view class="searchInput">
+    <image src="/images/others/search.png"></image>
+    <input placeholder="搜索精彩活动"></input>
+  </view>
+  <view class="searchTxt">搜索</view>
+</view>
+
+<view class="historyList">
+  <view class="searchTitle">搜索“baba”</view>
+  <view class="searchList"><image src="/images/others/search.png"></image>爸爸去哪了</view>
+  <view class="searchList"><image src="/images/others/search.png"></image>爸爸去哪了</view>
+  <view class="searchList"><image src="/images/others/search.png"></image>爸爸去哪了</view>
+  <view class="searchList"><image src="/images/others/search.png"></image>爸爸去哪了</view>
+  <view class="searchList"><image src="/images/others/search.png"></image>爸爸去哪了</view>
+  <view class="searchList"><image src="/images/others/search.png"></image>爸爸去哪了</view>
+  <view class="searchList"><image src="/images/others/search.png"></image>爸爸去哪了</view>
+</view>
+<view class="title"><text class="bar"></text>热门搜索</view>
+<view class="history">
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+</view>
+<view class="title"><text class="bar"></text>历史搜索</view>
+<view class="history">
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+  <view>爸爸去哪了</view>
+</view>

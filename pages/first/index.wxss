@@ -1,0 +1,105 @@
+page{
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.pic{
+  width: 400rpx;
+  height: 120rpx;
+  position: fixed;
+  top: 26%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.pic image{
+  width: 100%;
+  height: 100%;
+}
+.text{
+  font-size: 30rpx;
+  color: #0a5b6e;
+  position: fixed;
+  bottom:6%;
+  left: 40%;
+}
+.dw{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+.dw .dw1{
+  width: 100%;
+  height: 100%;
+}
+.dw .dw2{
+  width: 168rpx;
+  height: 300rpx;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+}
+.dw .dw3{
+  width: 396rpx;
+  height: 546rpx;
+  position: absolute;
+  z-index: 5;
+  top: 216rpx;
+  right: 144rpx;
+}
+.dw .dw4{
+  width: 107rpx;
+  height: 380rpx;
+  position: absolute;
+  z-index: 5;
+  bottom: 521rpx;
+  left: 104rpx;
+}
+.dw .dw5{
+  width: 210rpx;
+  height: 44rpx;
+  position: absolute;
+  z-index: 5;
+  bottom: 38rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dw .countDown{
+  background: rgba(0, 0, 0, .4);
+  padding: 6rpx 20rpx;
+  border-radius: 10000rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  z-index: 98;
+  color: #fff;
+  width: 100rpx;
+  text-align: center;
+}
+
+
+.toggle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding:0  20rpx;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99;
+}
+.toggle button{
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #528af0;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+}
