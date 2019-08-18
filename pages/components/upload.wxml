@@ -1,6 +1,0 @@
-<!--pages/components/upload.wxml-->
-<view class='uploadPopup' catchtouchmove='chutou' wx:if='{{show}}' bindtap='close'>
-  <image src='{{allImg[typeVal]}}' mode='widthFix' catchtap='{{false}}'></image>
-  <view class='warn' catchtap='{{false}}'>请务必按照上面示例图上传,圆角对齐;若模糊、反光、太暗、有遮挡、则不予认证</view>
-  <view class='learn' catchtap='upload' data-typeval='{{typeVal}}'>知道了</view>
-</view>
