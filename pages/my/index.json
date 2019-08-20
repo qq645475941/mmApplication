@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "img-icon": "/components/imgIcon/imgIcon"
+  }
 }

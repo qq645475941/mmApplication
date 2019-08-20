@@ -1,4 +1,4 @@
-
+@import './comstyles/usefull.wxss'
 page{
     background-color: #fafafa;
     font-size: 28rpx;

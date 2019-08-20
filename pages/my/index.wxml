@@ -1,2 +1,32 @@
 <!--pages/my/index.wxml-->
-<text>个人中心</text>
+<view class="header">
+  <view class="headTxt">我的</view>
+  <view class="search" bindtap="toSearch"><image src="/images/others/search.png"></image>搜索精彩活动</view>
+  <view class="notification" bindtap="toNotification">
+    <view><image src="/images/others/notification.png"></image> </view>
+    <view>通知</view>
+  </view>
+</view>
+<view class="circleBg"></view>
+<view class="user-content">
+  <view class="user-info d-flex j-between">
+    <view class="user-header">
+      <image src="/images/others/demo.jpg"></image>
+    </view>
+    <view>
+      <view class="d-flex j-between">
+          <view class="user-name">哪吒爸爸</view>
+          <view class="text-red">31积分</view>
+      </view>
+      <view class="user-detail">哪吒爸爸爱敖丙！哪吒爸爸爱敖丙！</view>
+    </view>
+  </view>
+  <view class="order-icon d-flex j-between">
+    <img-icon wx:key="item" wx:for="{{orderInon}}" imgPath="{{item.imgPath}}" text="{{item.text}}"></img-icon>
+  </view>
+</view>
+<view class="my-content d-flex j-around">
+  <view class="my-item" wx:key="item" wx:for="{{myInon}}">
+    <img-icon  imgPath="{{item.imgPath}}" text="{{item.text}}"></img-icon>
+  </view>
+</view>

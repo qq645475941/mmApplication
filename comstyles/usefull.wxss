@@ -1,0 +1,49 @@
+.re{
+  position: relative;
+}
+
+.f-20{
+  font-size: 20rpx;
+}
+
+.f-30{
+  font-size: 30rpx;
+}
+
+.fw-600{
+  font-weight: 600;
+}
+
+.my-10{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx; 
+}
+.my-20{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx; 
+}
+.mx-20{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.mx-30{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+
+.d-flex{
+  display: flex;
+}
+.j-center{
+  justify-content: center;
+}
+.j-between{
+  justify-content: space-between;
+}
+.j-around{
+  justify-content: space-around;
+}
+.a-center{
+  align-items: center;
+}

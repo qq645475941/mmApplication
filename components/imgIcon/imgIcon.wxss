@@ -1,0 +1,9 @@
+/* components/imgIcon.wxss */
+.enterList{
+  text-align: center;
+}
+.enterList image{
+  width: 42rpx;
+  height: 42rpx;
+  margin-bottom: 10rpx;
+}
