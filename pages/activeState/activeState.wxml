@@ -1,0 +1,7 @@
+<view class="header-tab d-flex j-between a-center">
+  <text  bindtap="changeTab" data-tab="{{item}}" wx:key="item"  wx:for="{{headerTab}}" class="{{currentTab==item.type?'active':''}}">{{item.name}}</text>
+</view>
+
+<view>
+  <active-item wx:key="item"  wx:for="{{activeList}}" listData="{{item}}"></active-item>
+</view>

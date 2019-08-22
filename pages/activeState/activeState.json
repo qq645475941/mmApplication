@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "active-item":"/components/activeItem/index"
+  }
+}

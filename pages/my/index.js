@@ -6,10 +6,10 @@ Page({
    */
   data: {
     orderInon:[
-      { imgPath: "/images/activity/activity.png", text: "全部",link: ""},
-      { imgPath: "/images/activity/activity.png", text: "待开始",link: ""},
-      { imgPath: "/images/activity/activity.png", text: "进行中",link: ""},
-      { imgPath: "/images/activity/activity.png", text: "已结束",link: ""},
+      { imgPath: "/images/activity/activity.png", text: "全部",link: "?type=all"},
+      { imgPath: "/images/activity/activity.png", text: "待开始", link: "?type=ready"},
+      { imgPath: "/images/activity/activity.png", text: "进行中", link: "?type=doing"},
+      { imgPath: "/images/activity/activity.png", text: "已结束", link: "?type=complated"},
     ],
     myInon:[
       { imgPath: "/images/others/rili.png", text: "活动日历",link: ""},
@@ -82,5 +82,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  toActive: function (e) {
+    let data = e.currentTarget.dataset.info
+    wx.navigateTo({
+      url: '/pages/activeState/activeState'+data.link,
+    })
+  },
 })

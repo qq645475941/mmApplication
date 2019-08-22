@@ -22,7 +22,7 @@
     </view>
   </view>
   <view class="order-icon d-flex j-between">
-    <img-icon wx:key="item" wx:for="{{orderInon}}" imgPath="{{item.imgPath}}" text="{{item.text}}"></img-icon>
+    <img-icon wx:key="item" wx:for="{{orderInon}}" imgPath="{{item.imgPath}}" text="{{item.text}}" data-info="{{item}}" bindtap="toActive"></img-icon>
   </view>
 </view>
 <view class="my-content d-flex j-around">

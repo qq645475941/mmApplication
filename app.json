@@ -6,7 +6,8 @@
     "pages/search/search",
     "pages/activity/index",
     "pages/first/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/activeState/activeState"
   ],
   "window": {
     "navigationBarTextStyle": "white",

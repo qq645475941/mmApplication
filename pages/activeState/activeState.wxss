@@ -1,0 +1,15 @@
+/* pages/activeState.wxss */
+
+.header-tab{
+  height: 80rpx;
+  background: #ff606f;
+  color: #fff;
+  padding: 0 40rpx;
+}
+.header-tab>text{
+  padding: 10rpx 0;
+  border-bottom: 1px solid #ff606f;
+} 
+.header-tab .active{
+  border-bottom: 1px solid #fff;
+}
