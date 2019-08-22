@@ -12,9 +12,9 @@ Page({
       { imgPath: "/images/activity/activity.png", text: "已结束", link: "?type=complated"},
     ],
     myInon:[
-      { imgPath: "/images/others/rili.png", text: "活动日历",link: ""},
-      { imgPath: "/images/others/shoucang.png", text: "活动收藏",link: ""},
-      { imgPath: "/images/others/headIcon.png", text: "我的关注",link: ""},
+      { imgPath: "/images/others/rili.png", text: "活动日历", link: "/pages/calendar/calendar"},
+      { imgPath: "/images/others/shoucang.png", text: "活动收藏", link: "/pages/activeShoucang/index"},
+      { imgPath: "/images/others/headIcon.png", text: "我的关注", link: "/pages/myAttention/index"},
       { imgPath: "/images/others/headIcon.png", text: "我的积分",link: ""},
       { imgPath: "/images/others/scan.png", text: "商户入口",link: ""},
       { imgPath: "/images/others/headIcon.png", text: "联系客服",link: ""},
@@ -87,6 +87,20 @@ Page({
     let data = e.currentTarget.dataset.info
     wx.navigateTo({
       url: '/pages/activeState/activeState'+data.link,
+    })
+  },
+
+  toIcon:function(e){
+    let data = e.currentTarget.dataset.info
+    if(data.link) {
+      wx.navigateTo({
+        url: data.link,
+      })
+    }
+  },
+  toSearch: function (e) {
+    wx.navigateTo({
+      url: '/pages/search/search',
     })
   },
 })

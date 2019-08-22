@@ -1,0 +1,5 @@
+<!--components/empty/index.wxml-->
+<view class="empty-box">
+  <view class="empty-text">{{text}}</view>
+  <view style="color: #999;">您可以去逛逛有那些想参加的~~</view>
+</view>

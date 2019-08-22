@@ -7,8 +7,13 @@
     "pages/activity/index",
     "pages/first/index",
     "pages/my/index",
-    "pages/activeState/activeState"
+    "pages/activeState/activeState",
+    "pages/activeShoucang/index",
+    "pages/myAttention/index"
   ],
+  "usingComponents": {
+    "empty": "/components/empty/index"
+  },
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "妈妈应用亲子活动",

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "active-item": "/components/activeItem/index"
+  },
+  "navigationBarTitleText": "活动收藏"
+}

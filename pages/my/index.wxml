@@ -27,6 +27,6 @@
 </view>
 <view class="my-content d-flex j-around">
   <view class="my-item" wx:key="item" wx:for="{{myInon}}">
-    <img-icon  imgPath="{{item.imgPath}}" text="{{item.text}}"></img-icon>
+    <img-icon  imgPath="{{item.imgPath}}" text="{{item.text}}" data-info="{{item}}" bindtap="toIcon"></img-icon>
   </view>
 </view>

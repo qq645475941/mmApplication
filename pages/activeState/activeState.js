@@ -14,14 +14,14 @@ Page({
     ],
     activeList:[],
     apiData:[
-      { info:'【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn:'待开始',type:'ready',btnState:1},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '进行中', type: 'doing', btnState: 2},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '已结束', type: 'complated', btnState: 3},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '待开始', type: 'rready', btnState: 1},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '进行中', type: 'doing', btnState: 2},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '已结束', type: 'complated', btnState: 3},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '待开始', type: 'ready', btnState: 1},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '进行中', type: 'doing', btnState: 2},
+      { info:'【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn:'待开始',type:'ready',},
+      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '进行中', type: 'doing', },
+      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '已结束', type: 'complated',},
+      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '待开始', type: 'ready',},
+      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '进行中', type: 'doing',},
+      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '已结束', type: 'complated',},
+      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '待开始', type: 'ready', },
+      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '进行中', type: 'doing',},
     ]
   },
   filterListData(){

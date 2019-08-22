@@ -1,0 +1,11 @@
+<view class="list d-flex j-between a-center" wx:key="{{item}}" wx:for="{{apiData}}">
+  <view class="list-left">
+    <image src="/images/others/demo.jpg"></image>
+  </view>
+  <view class="list-right">
+    <view class="right-name">{{item.attName}}</view>
+    <view class="right-info">{{item.attInfo}}</view>
+  </view>
+</view>
+
+<empty wx:if="{{apiData.length == 0}}" text="{{'暂无关注'}}"></empty>

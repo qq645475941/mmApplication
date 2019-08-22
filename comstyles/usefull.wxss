@@ -47,3 +47,7 @@
 .a-center{
   align-items: center;
 }
+
+.t-center{
+  text-align: center;
+}

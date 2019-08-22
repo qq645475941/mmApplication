@@ -5,3 +5,5 @@
 <view>
   <active-item wx:key="item"  wx:for="{{activeList}}" listData="{{item}}"></active-item>
 </view>
+
+<empty wx:if="{{activeList.length == 0}}" text="{{'暂无活动'}}"></empty>

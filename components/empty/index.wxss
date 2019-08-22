@@ -1,0 +1,11 @@
+/* components/empty/index.wxss */
+.empty-box{
+  margin-top: 50%;
+  text-align: center;
+}
+.empty-text{
+  color: #000;
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}

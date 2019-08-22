@@ -1,0 +1,8 @@
+<!--pages/activeShoucang/index.wxml-->
+
+<view>
+  <active-item wx:key="item"  wx:for="{{apiData}}" listData="{{item}}"></active-item>
+</view>
+
+<empty wx:if="{{apiData.length == 0}}" text="{{'暂无收藏'}}"></empty>
+

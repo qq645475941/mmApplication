@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "active-item":"/components/activeItem/index"
-  }
+  },
+  "navigationBarTitleText": "我的活动"
 }
