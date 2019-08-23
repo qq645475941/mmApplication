@@ -9,7 +9,8 @@
     "pages/my/index",
     "pages/activeState/activeState",
     "pages/activeShoucang/index",
-    "pages/myAttention/index"
+    "pages/myAttention/index",
+    "pages/myIntegral/index"
   ],
   "usingComponents": {
     "empty": "/components/empty/index"

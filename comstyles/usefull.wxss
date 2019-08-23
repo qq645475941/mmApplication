@@ -22,6 +22,9 @@
   margin-top: 20rpx;
   margin-bottom: 20rpx; 
 }
+.mt-20{
+  margin-top: 20rpx;
+}
 .mx-20{
   margin-left: 20rpx;
   margin-right: 20rpx;
@@ -50,4 +53,13 @@
 
 .t-center{
   text-align: center;
+}
+.t-black{
+  color: #000;
+}
+.t-grey{
+  color: #999;
+}
+.t-red{
+  color:#ff606f;
 }

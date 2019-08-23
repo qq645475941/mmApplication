@@ -1,4 +1,5 @@
 // pages/activeState.js
+const {http} = require('../../utils/api.js')
 Page({
 
   /**
@@ -55,7 +56,15 @@ Page({
     this.setData({
       currentTab: options.type
     })
+    this.getListByapi();
     this.filterListData();
+  },
+
+  getListByapi(){
+    let url = `120/gainActivityConcern`
+    http('get', url).then(res => {
+      console.log(res);
+    });
   },
 
   /**

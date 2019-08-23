@@ -15,7 +15,7 @@ Page({
       { imgPath: "/images/others/rili.png", text: "活动日历", link: "/pages/calendar/calendar"},
       { imgPath: "/images/others/shoucang.png", text: "活动收藏", link: "/pages/activeShoucang/index"},
       { imgPath: "/images/others/headIcon.png", text: "我的关注", link: "/pages/myAttention/index"},
-      { imgPath: "/images/others/headIcon.png", text: "我的积分",link: ""},
+      { imgPath: "/images/others/headIcon.png", text: "我的积分", link: "/pages/myIntegral/index"},
       { imgPath: "/images/others/scan.png", text: "商户入口",link: ""},
       { imgPath: "/images/others/headIcon.png", text: "联系客服",link: ""},
       { imgPath: "/images/others/scan.png", text: "扫描二维码",link: ""},

@@ -1,0 +1,15 @@
+/* pages/myIntegral/index.wxss */
+
+.integral-header{
+  color: #fff;
+  background: #ff606e;
+  padding: 20rpx 30rpx;
+  font-size: 40rpx
+}
+.integral-box{
+  padding: 10rpx 30rpx;
+  border-top: 1px solid #f0ecec
+}
+.integral-item{
+  border-bottom: 1px solid #f0ecec;
+}

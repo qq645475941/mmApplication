@@ -1,0 +1,59 @@
+<!--pages/myIntegral/index.wxml-->
+
+<view class="integral-header t-center">
+  <text>81</text>
+</view>
+
+<view class="mt-20 integral-box" >
+  <view class="t-center my-20">积分明细</view>
+  <view class="integral-item">
+    <view class="d-flex j-between">
+      <text>每日签到</text>
+      <text class="t-red">+8</text>
+    </view>
+    <view class="my-10 d-flex j-between t-grey">
+      <text>人之初学堂</text>
+      <text>2019-07-02</text>
+    </view>
+  </view>
+  <view class="integral-item">
+    <view class="d-flex j-between">
+      <text>每日签到</text>
+      <text class="t-red">+8</text>
+    </view>
+    <view class="my-10 d-flex j-between t-grey">
+      <text>人之初学堂</text>
+      <text>2019-07-02</text>
+    </view>
+  </view>
+  <view class="integral-item">
+    <view class="d-flex j-between">
+      <text>每日签到</text>
+      <text class="t-red">+8</text>
+    </view>
+    <view class="my-10 d-flex j-between t-grey">
+      <text>人之初学堂</text>
+      <text>2019-07-02</text>
+    </view>
+  </view>
+  <view class="integral-item">
+    <view class="d-flex j-between">
+      <text>每日签到</text>
+      <text class="t-red">+8</text>
+    </view>
+    <view class="my-10 d-flex j-between t-grey">
+      <text>人之初学堂</text>
+      <text>2019-07-02</text>
+    </view>
+  </view>
+  <view class="integral-item">
+    <view class="d-flex j-between">
+      <text>每日签到</text>
+      <text class="t-red">+8</text>
+    </view>
+    <view class="my-10 d-flex j-between t-grey">
+      <text>人之初学堂</text>
+      <text>2019-07-02</text>
+    </view>
+  </view>
+</view>

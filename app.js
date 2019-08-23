@@ -75,7 +75,7 @@ App({
   // },
   globalData: {
     version: '1.0.0', // 版本号
-
+    apiServer:'http://116.62.28.28:3000/mock/28/'
   },
   // 获取地理位置
   getLocation: function () {
