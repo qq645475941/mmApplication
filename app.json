@@ -1,26 +1,35 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/my/index",
+    "pages/activity/index",
     "pages/calendar/calendar",
     "pages/notification/notification",
     "pages/search/search",
-    "pages/activity/index",
     "pages/first/index",
-    "pages/my/index",
     "pages/activeState/activeState",
     "pages/activeShoucang/index",
     "pages/myAttention/index",
-    "pages/myIntegral/index"
+    "pages/myIntegral/index",
+    "pages/signIn/signIn",
+    "pages/shanghu/index",
+    "pages/yewuhezuo/index",
+    "pages/yijianfankun/index",
+    "pages/aboutMe/index",
+    "pages/userinfo/index"
   ],
   "usingComponents": {
-    "empty": "/components/empty/index"
+    "empty": "/components/empty/index",
+    "mp-dialog": "/components/dialog/dialog"
   },
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "妈妈应用亲子活动",
     "backgroundColor": "#f8f8f8",
     "navigationBarBackgroundColor": "#ff606e",
-    "navigationStyle": "default"
+    "navigationStyle": "default",
+    "enablePullDownRefresh":true,
+    "onReachBottomDistance":50
   },
   "tabBar": {
     "color": "#131313",
@@ -29,8 +38,8 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/activity/activity.png",
-        "selectedIconPath": "/images/activity/activity-sel.png"
+        "iconPath": "images/index/index.png",
+        "selectedIconPath": "/images/index/index-sel.png"
       },
       {
         "pagePath": "pages/activity/index",
@@ -41,8 +50,8 @@
       {
         "pagePath": "pages/my/index",
         "text": "我的",
-        "iconPath": "images/activity/activity.png",
-        "selectedIconPath": "/images/activity/activity-sel.png"
+        "iconPath": "images/my/my.png",
+        "selectedIconPath": "/images/my/my-sel.png"
       }
     ]
   },
@@ -54,7 +63,7 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "你的位置信息将用于定位货源信息"
+      "desc": "您的位置信息将用于查找周边活动"
     }
   },
   "sitemapLocation": "sitemap.json"

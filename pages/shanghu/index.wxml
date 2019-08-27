@@ -1,0 +1,15 @@
+
+<view class="form-box m-30 px-30">
+  <view class="form-item py-30 d-flex a-center border-bottom-light">
+    <text class="w-90 fw-600">账号</text>
+    <input type="text" placeholder="请输入你的账号"></input>
+  </view>
+  <view class="form-item py-30 d-flex a-center">
+    <text class="w-90 fw-600">密码</text>
+    <input type="password" placeholder="请输入你的密码"></input>
+  </view>
+</view>
+
+<view class="mt-50 px-30">
+  <button class="form-btn">登陆</button>
+</view>

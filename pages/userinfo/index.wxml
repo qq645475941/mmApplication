@@ -1,0 +1,45 @@
+<view class="m-30">
+  <view class="fw-600">个人信息</view>
+  <view class="info-box mt-30">
+    <view class="d-flex a-center j-between border-bottom-light py-30">
+      <view class="t-grey">头像</view>
+      <view class="header-img"><image src="/images/others/demo.jpg"></image></view>
+    </view>
+    <view class="d-flex a-center j-between border-bottom-light py-30">
+      <view class="t-grey">昵称</view>
+      <view class="flex-auto t-right"><input placeholder="请填写您的昵称（XX爸爸/妈妈）"></input></view>
+    </view>
+    <view class="d-flex a-center j-between border-bottom-light py-30">
+      <view class="t-grey">手机号码</view>
+      <view class="flex-auto t-right"><input placeholder="请填写您的手机号码"></input></view>
+    </view>
+    <view class="d-flex a-center j-between border-bottom-light py-30">
+      <view class="t-grey">详细地址</view>
+      <view class="flex-auto t-right"><input placeholder="请填写您的详细地址"></input></view>
+    </view>
+    <view class="d-flex a-center j-between py-30">
+      <view class="t-grey">个性签名</view>
+      <view class="flex-auto t-right"><input placeholder="请填写您的个性签名"></input></view>
+    </view>
+  </view>
+
+   <view class="mt-30 d-flex a-center j-between">
+    <view><text class="fw-600">孩子信息</text>(1个孩子)</view>
+    <view class="addBtn">添加</view>
+   </view>
+   <view class="info-box mt-30">
+      <view class="d-flex a-center j-between border-bottom-light py-30">
+        <view class="t-grey">姓名</view>
+        <view class="flex-auto t-right"><input placeholder="请输入孩子姓名"></input></view>
+      </view>
+      <view class="d-flex a-center j-between border-bottom-light py-30">
+        <view class="t-grey">性别</view>
+        <view class="flex-auto t-right"><input placeholder="请输入孩子性别"></input></view>
+      </view>
+      <view class="d-flex a-center j-between border-bottom-light py-30">
+        <view class="t-grey">生日</view>
+        <view class="flex-auto t-right"><input placeholder="请输入孩子生日"></input></view>
+      </view>
+      <view class="mt-30 t-center t-red"> 删除</view>
+   </view>
+</view>

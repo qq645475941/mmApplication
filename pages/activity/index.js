@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    lx_items_list:[
+    sliderList:[
       { name: "全南昌"},
       { name: "全南昌"},
       { name: "全南昌"},
@@ -15,7 +15,10 @@ Page({
       { name: "全南昌"},
     ],
     isfull: false,
-    lxopen: false,
+    allNC: false,
+    allType: false,
+    allInterval: false,
+    filtSort: false,
     
   },
 
@@ -25,17 +28,61 @@ Page({
   onLoad: function (options) {
 
   },
-  lista: function (e) {
-    this.setData({ lxopen: !this.data.lxopen, lxshow: !this.data.lxshow, shownavindex: e.currentTarget.dataset.nav })
+
+  handleAllNC: function (e) {
+    this.setData({ 
+      allNC: !this.data.allNC,
+      isfull: !this.data.isfull,
+      allType: false,
+      allInterval: false,
+      filtSort: false,
+      shownavindex: e.currentTarget.dataset.nav 
+    })
+    this.isShowbg()
   },
-  listb: function (e) {
-    this.setData({ ysjopen: !this.data.ysjopen, ysjshow: !this.data.ysjshow, shownavindex: e.currentTarget.dataset.nav })
+  handleAllType: function (e) {
+    this.setData({
+      allType: !this.data.allType,
+      isfull: !this.data.isfull,
+      allNC: false,
+      allInterval: false,
+      filtSort: false,
+      shownavindex: e.currentTarget.dataset.nav
+    })
+    this.isShowbg()
   },
-  listc: function (e) {
-    this.setData({ mhlxopen: !this.data.mhlxopen, mhlxopen: !this.data.mhlxopen, shownavindex: e.currentTarget.dataset.nav })
+  handleAllInterval: function (e) {
+    this.setData({
+      allInterval: !this.data.allInterval,
+      isfull: !this.data.isfull,
+      allNC: false,
+      allType: false,
+      filtSort: false,
+      shownavindex: e.currentTarget.dataset.nav
+    })
+    this.isShowbg()
   },
-  listf: function (e) {
-    this.setData({ moreopen: !this.data.moreopen, mhlxopen: !this.data.moreopen, shownavindex: e.currentTarget.dataset.nav })
+  handleFilterSort: function (e) {
+    this.setData({
+      filtSort: !this.data.filtSort,
+      isfull: !this.data.isfull,
+      allNC: false,
+      allType: false,
+      allInterval: false,
+      shownavindex: e.currentTarget.dataset.nav
+    })
+    this.isShowbg()
+  },
+  isShowbg:function(){
+    let allNC = this.data.allNC;
+    let allType = this.data.allType;
+    let allInterval = this.data.allInterval;
+    let filtSort = this.data.filtSort;
+    if (allNC || allType || allInterval || filtSort){
+      this.setData({isfull:true})
+    }else{
+      this.setData({ isfull: false })
+    }
   },
   toSearch: function (e) {
     wx.navigateTo({

@@ -1,0 +1,16 @@
+/* pages/shanghu/index.wxss */
+.form-box{
+  background: #fff;
+  border-radius: 20rpx;
+
+}
+
+.form-btn{
+  background: #ff606f;
+  color: #fff;
+  border-radius: 100rpx;
+}
+
+.w-90{
+  width: 90rpx;
+}

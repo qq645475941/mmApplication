@@ -9,30 +9,30 @@
 <!--筛选-->
 <view class="shaixuan">
   <view class="nav">
-    <view class="nav-son {{shownavindex == 1? 'active' : ''}}" bindtap="lista" data-nav="1">
-      <view class="contentx {{lxClass}}"> 全南昌</view>
+    <view class="nav-son {{shownavindex == 1 && allNC? 'active' : ''}}" bindtap="handleAllNC" data-nav="1">
+      <view class="contentx}"> 全南昌</view>
       <view class="icon"></view>
     </view>
 
-    <view class="nav-son borders {{shownavindex == 2? 'active' : ''}}" bindtap="listb" data-nav="2">
-      <view class="contentx {{ysjClass}}">全类型</view>
+    <view class="nav-son borders {{shownavindex == 2 && allType ? 'active' : ''}}" bindtap="handleAllType" data-nav="2">
+      <view class="contentx ">全类型</view>
       <view class="icon"></view>
     </view>
 
-    <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="listc" data-nav="3">
-      <view class="contentx {{mhlxClass}}">全时段</view>
+    <view class="nav-son {{shownavindex == 3 && allInterval? 'active' : ''}}" bindtap="handleAllInterval" data-nav="3">
+      <view class="contentx">全时段</view>
       <view class="icon"></view>
     </view>
     
-    <view class="nav-son borders {{shownavindex == 4? 'active' : ''}}" bindtap="listf" data-nav="4">
-      <view class="contentx {{moreClass}}">综合排序</view>
+    <view class="nav-son borders {{shownavindex == 4 && filtSort ? 'active' : ''}}" bindtap="handleFilterSort" data-nav="4">
+      <view class="contentx">综合排序</view>
       <view class="icon"></view>
     </view>
   </view>
 
   <!-- 全南昌 -->
-  <view class="temp temp1 {{lxopen ? 'slidown' : 'slidup'}} {{lxshow ? 'disappear':''}}">
-    <view class="{{item['flag'] ? 'on' : ''}}" wx:key="item" wx:for="{{lx_items_list}}" id="{{item['id']}}" bindtap="choose_lx_item">
+  <view class="temp temp1 {{allNC ? 'slidown' : 'slidup'}}">
+    <view class="{{item['flag'] ? 'on' : ''}}" wx:key="item" wx:for="{{sliderList}}" id="{{item['id']}}" bindtap="choose_lx_item">
         {{item['name']}}
         <!-- <block wx:if="{{item['flag']}}"> -->
           <icon type="success_no_circle" size="12" color="#14bab4" />
@@ -41,8 +41,8 @@
   </view>
 
   <!-- 全类型 -->
-  <view class="temp temp1 {{ysjopen ? 'slidown' : 'slidup'}} {{ysjshow ? 'disappear':''}}">
-    <view class="{{item['flag'] ? 'on' : ''}}" wx:key="item" wx:for="{{lx_items_list}}" id="{{item['id']}}" bindtap="choose_ysj_item">
+  <view class="temp temp1 {{allType ? 'slidown' : 'slidup'}}">
+    <view class="{{item['flag'] ? 'on' : ''}}" wx:key="item" wx:for="{{sliderList}}" id="{{item['id']}}" bindtap="choose_ysj_item">
         {{item['name']}}
         <block wx:if="{{item['flag']}}">
           <icon type="success_no_circle" size="12" color="#14bab4" />
@@ -51,8 +51,8 @@
   </view>
 
   <!-- 全时段 -->
-  <view class="temp temp1 {{mhlxopen ? 'slidown' : 'slidup'}} {{mhlxshow ? 'disappear':''}}">
-    <view class="{{item['flag'] ? 'on' : ''}}" wx:key="item" wx:for="{{lx_items_list}}" id="{{item['id']}}" bindtap="choose_city_item">
+  <view class="temp temp1 {{allInterval ? 'slidown' : 'slidup'}}">
+    <view class="{{item['flag'] ? 'on' : ''}}" wx:key="item" wx:for="{{sliderList}}" id="{{item['id']}}" bindtap="choose_city_item">
         {{item['name']}}
         <block wx:if="{{item['flag']}}">
           <icon type="success_no_circle" size="12" color="#14bab4" />
@@ -61,8 +61,8 @@
   </view>
 
   <!-- 综合排序 -->
-  <view class="temp temp1 {{orderopen ? 'slidown' : 'slidup'}} {{ordershow ? 'disappear':''}}">
-    <view class="{{item['flag'] ? 'on' : ''}}" wx:key="item" wx:for="{{lx_items_list}}" id="{{item['id']}}" bindtap="choose_order_item">
+  <view class="temp temp1 {{filtSort ? 'slidown' : 'slidup'}}">
+    <view class="{{item['flag'] ? 'on' : ''}}" wx:key="item" wx:for="{{sliderList}}" id="{{item['id']}}" bindtap="choose_order_item">
         {{item['name']}}
         <block wx:if="{{item['flag']}}">
           <icon type="success_no_circle" size="12" color="#14bab4" />

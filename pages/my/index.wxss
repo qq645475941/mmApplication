@@ -59,6 +59,37 @@
   height: 150rpx;
   position: relative;
 }
+.user-header .getHeadIco{
+  font-size: 20rpx;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.user-header image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.user-header .black{
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background-color: #f05252;
+  font-size: 22rpx;
+  text-align: center;
+  line-height: 36rpx;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
 .user-content .user-header image{
   width: 170rpx;
   height: 170rpx;
@@ -67,11 +98,18 @@
   top: -65rpx;
 
 }
+.msg{
+  width: 70%;
+}
+.jifen image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 5px
+}
 .user-content .user-info,.order-icon{
   height: 150rpx;
 }
 .user-content .user-info{
-  background: #ebebeb;
   padding: 30rpx 30rpx 0;
   box-sizing: border-box;
   border-radius: 30rpx 30rpx 0 0;
@@ -102,5 +140,5 @@
 }
 .my-content .my-item{
   flex: 1 1 33%;
-  margin-bottom:20rpx;  
+  margin-bottom:30rpx;  
 }

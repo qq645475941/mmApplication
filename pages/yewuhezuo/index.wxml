@@ -1,0 +1,31 @@
+
+<view class="form-box m-30 px-30">
+  <view class="form-item py-30 d-flex a-center border-bottom-light">
+    <text class="w-190 fw-600">姓名</text>
+    <input type="text" placeholder="请输入您的姓名"></input>
+  </view>
+  <view class="form-item py-30 d-flex a-center">
+    <text class="w-190 fw-600">手机号码</text>
+    <input type="text" placeholder="请输入您的手机号码"></input>
+  </view>
+  <view class="form-item py-30 d-flex a-center">
+    <text class="w-190 fw-600">所在城市</text>
+    <input type="text" placeholder="请输入您所在的城市"></input>
+  </view>
+  <view class="form-item py-30 d-flex a-center">
+    <text class="w-190 fw-600">合作意向</text>
+    <input type="text" placeholder="请输入你的产品或者合作方式"></input>
+  </view>
+  <view class="form-item py-30 d-flex a-center">
+    <text class="w-190 fw-600">商家/机构</text>
+    <input type="text" placeholder="请输入您的品牌货机构名称"></input>
+  </view>
+</view>
+
+<view class="mt-50 px-30">
+  <button class="form-btn">提交</button>
+</view>
+
+<view class="mt-30 t-center t-grey">
+  请留下您的联系方式，我们会在2个工作日内联系您！
+</view>

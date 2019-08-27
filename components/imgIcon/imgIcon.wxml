@@ -1,5 +1,5 @@
 <!--components/imgIcon.wxml-->
   <view class="enterList" >
     <view><image wx:if="{{imgPath}}" src="{{imgPath}}"></image> </view>
-    <view>{{text}}</view>
+    <view class="t-42">{{text}}</view>
   </view>

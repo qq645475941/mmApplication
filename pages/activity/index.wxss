@@ -1,9 +1,18 @@
+page{
+  padding-top: 110rpx;
+}
 .header{
   height: 110rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding:  0 30rpx;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+  background-color: #fafafa;
 }
 .headTxt{
   font-size: 36rpx;
@@ -76,7 +85,7 @@
 
 .fullbg {
   position: fixed;
-  top: 0;
+  top: 110rpx;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -90,21 +99,25 @@
 }
 
 .nav-son.active .contentx {
-  color: #14bab4;
+  color: #ff606f;
 }
 
 .nav-son.active .icon {
-  border-bottom: 4px solid #14bab4;
+  border-bottom: 4px solid #ff606f;
   border-top: 0;
 }
 
 @keyframes slidown {
   from {
     transform: translateY(-100%);
+    opacity: 0;
+    display: none;
   }
 
   to {
     transform: translateY(0%);
+    opacity: 1;
+    display: block;
   }
 }
 
@@ -116,15 +129,17 @@
 @keyframes slidup {
   from {
     transform: translateY(0%);
+    opacity: 1;
   }
 
   to {
     transform: translateY(-100%);
+    opacity: 0
   }
 }
 
 .slidup {
-  display: block;
+  display: none;
   animation: slidup 0.2s ease-in both;
 }
 
@@ -139,14 +154,14 @@
 
 .temp {
   position: absolute;
-  z-index: 4;
+  z-index: 2;
   width: 100%;
 }
 
 .temp .on {
-  color: #14bab4;
+  color: #ff606f;
 }
-.on{color: #14bab4;}
+.on{color: #ff606f;}
 .temp icon {
   float: right;
   position: relative;
@@ -154,11 +169,11 @@
 }
 
 .temp1 {
-  display: none;
   width: 100%;
   max-height: 550rpx;
   overflow-y: scroll;
   background: #fff;
+  opacity: 0;
 }
 .temp1 view {
   border-bottom: 1px solid #eee;

@@ -10,6 +10,7 @@
 <swiper 
   indicator-dots="{{indicatorDots}}"
   indicator-color="{{indicatorColor}}"
+  indicator-active-color='{{indicatorActiveColor}}'
   autoplay="{{autoplay}}" 
   interval="{{interval}}" 
   duration="{{duration}}"
@@ -26,15 +27,15 @@
     <view><image src="/images/others/rili.png"></image> </view>
     <view>活动日历</view>
   </view>
-  <view class="enterList">
+  <view class="enterList" bindtap="toCollect">
     <view><image src="/images/others/shoucang.png"></image> </view>
     <view>活动收藏</view>
   </view>
-  <view class="enterList">
+  <view class="enterList" bindtap="handleScan">
     <view><image src="/images/others/scan.png"></image> </view>
     <view>扫描二维码</view>
   </view>
-  <view class="enterList">
+  <view class="enterList" bindtap="toSign">
     <view><image src="/images/others/qiandao.png"></image> </view>
     <view>签到</view>
   </view>
@@ -43,47 +44,14 @@
 <view class="title"><text class="bar"></text>最新活动</view>
 
 <!-- 列表 -->
-<view class="list">
-  <view class="listL"><image src="/images/others/demo.jpg"></image></view>
+<view class="list" wx:key="{{item}}" wx:for="{{newActiveList}}">
+  <view class="listL"><image src="{{item.cover && item.cover[0]?item.cover[0]:'/images/others/demo.jpg'}}"></image></view>
   <view class="listR">
-    <view>【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~</view>
-    <view class="time">2019-08-02  至  2019-08-02</view>
+    <view>【{{item.title}}】{{item.attention}}</view>
+    <view class="time">{{item.startDate}} 至  {{item.endDate}}</view>
     <view class="lRBot">
-      <view>免费</view> 
-      <button>立即参加</button>
-    </view>
-  </view>
-</view>
-<view class="list">
-  <view class="listL"><image src="/images/others/demo.jpg"></image></view>
-  <view class="listR">
-    <view>【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~</view>
-    <view class="time">2019-08-02  至  2019-08-02</view>
-    <view class="lRBot">
-      <view>免费</view> 
-      <button>立即参加</button>
-    </view>
-  </view>
-</view>
-<view class="list">
-  <view class="listL"><image src="/images/others/demo.jpg"></image></view>
-  <view class="listR">
-    <view>【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~</view>
-    <view class="time">2019-08-02  至  2019-08-02</view>
-    <view class="lRBot">
-      <view>免费</view> 
-      <button>立即参加</button>
-    </view>
-  </view>
-</view>
-<view class="list">
-  <view class="listL"><image src="/images/others/demo.jpg"></image></view>
-  <view class="listR">
-    <view>【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~</view>
-    <view class="time">2019-08-02  至  2019-08-02</view>
-    <view class="lRBot">
-      <view>免费</view> 
-      <button>立即参加</button>
+      <view>{{item.amount == 0 ? '免费': item.amount}}</view> 
+      <button disabled="{{item.activityStatus!==1}}">{{activeStateMap[item.activityStatus]}}</button>
     </view>
   </view>
 </view>

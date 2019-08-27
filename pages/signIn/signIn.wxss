@@ -1,0 +1,364 @@
+page {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.calendar{
+  /* height: 522rpx; */
+  background-color: #ff606f;
+  position: relative;
+
+}
+.toggle{
+  width: 130rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  /* position: absolute;
+  left: 0;
+  right: 0; */
+  margin: 0 auto;
+  /* bottom: -30rpx; */
+  /* background-color: #ff606f; */
+  color: #fff;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAAA2CAYAAAAxiP7tAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCNUM1OTExRkJDMjExMUU5OTA2MDlDNTIzNjU2NzM5MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCNUM1OTEyMEJDMjExMUU5OTA2MDlDNTIzNjU2NzM5MCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI1QzU5MTFEQkMyMTExRTk5MDYwOUM1MjM2NTY3MzkwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkI1QzU5MTFFQkMyMTExRTk5MDYwOUM1MjM2NTY3MzkwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+zuq60AAAA4BJREFUeNrsnU9IFFEcx5+b0E06dOvQPwShS3XyGp73EkQRBCXUoQ7loYj0mJ2LDl76Q5GF5CFCCCJLCqFA0wK7GJJCGazhskaxmtrvt/s8VLS6u29m3u77fOAjLDgz8H6/L7MzO/New+rxs5uNMU3iNrFZbBUPiPsMALhiSnwlvhE/itNiRsw2yp+8/aCOiw/tRhrIU9YmxhCgbBbEm+Jdcex//5QqsYNJ8by4W7whrjKmABvmtrhL7CgVwPVCuMaceFI8KOYYW4CS/BQPie02O+uSKmPnj8S2je4YIEAWxbTYX85GqTIPMmLPiIuMN8A/nBYHy90oVcGB9A7PBcYb4A+emOJNGBNHCJXr4lvGHaCA3rS8WOnGlYZwRbzE2AMUGBLfxx1C5an4gfEHMPer2biaEOop+B7jD1C4HkwkhMpjxh8C54v4OckQ6tfReeoAATNR7Q6qDaF+JX1HHSBgZpIOofKJOkDAfPMhhF+pAwRM1ocQ/qAOEDCrPoRwiTpAwDT4EEKAkGkihAA1DiEEIIQAhBAACCEAIQSAysj5EMIF6gABs+BDCL9TByCEyYYwQx0gYOZ8COEUdYCAmfIhhLq4RZ5aQIBo30/6EMJf4ij1gAAZtf2feAiVF9QDAmTIxU5chfA59YAAGfQphDo1PndJISQytu+9CaG+2NtHXSAg+oyjF9pdPrZ2h7pAQDjrd5chHHF1oQrgOUO2370LoXKZ+kAAdLvcmesQ6t2il9QI6hi9GfPM5xAq58RlagV1iPZ1h+udRhHCMfEq9YI65JqJ4OmwqF7q7TSs5Av1hZ5cIlkYN6oQ6oOth42Dt44BPCBn+zlfSyFU9O2KY+IiNYQaZsn28WRUB4h6jhldRLTdOJivHyABtG9PmIgXw41joqde8YzhjinUFsu2b3ujPlBcs631iEcML/9CbZC3/doTx8HinPKwX2wzDlY2BYiQGdun/XEdMO55R4fF/eIAtQYPGbD9ORznQZOY/FeXF06LR8VZ6g4eMGv7MW0cLH9dCyFc44HYIl4x/J4IyZCz/ddi+zERUh4Mgj5ds0Ps4noRYrzu67J915n0ScCXtSjmTfH1kJ32oviWYboMcEvG9lWb7bNu23eJ0+jZQK2Y4qRRqq4FvkdsFfeKzeJ2cau4RdxEX8Ff6G97WVOcFXvaFJ9yGRdfixPG04dGfgswAJFkpYFw47tXAAAAAElFTkSuQmCC);
+  background-size: 100% 100%;
+}
+.toggle image{
+  width: 28rpx;
+  height: 18rpx;
+  transform: rotate(180deg);
+  transform-origin: center center;
+}
+.toggle.up image{
+  transform: rotate(360deg);
+  transform-origin: center center;
+}
+
+.top-handle view{
+  color: #fff;
+}
+.box {
+    display: flex;
+    overflow: hidden;
+}
+
+.box-lr {
+    flex-direction: row;
+}
+
+.box-rl {
+    flex-direction: row-reverse;
+}
+
+.box-tb {
+    flex-direction: column;
+}
+
+.box-bt {
+    flex-direction: column-reverse;
+}
+
+.box-pack-center {
+    justify-content: center;
+}
+
+.box-pack-start {
+    justify-content: flex-start;
+}
+
+.box-pack-end {
+    justify-content: flex-end;
+}
+
+.box-pack-between {
+    justify-content: space-between;
+}
+
+.box-pack-around {
+    justify-content: space-around;
+}
+
+.box-align-center {
+    align-items: center;
+}
+
+.box-align-start {
+    align-items: flex-start;
+}
+
+.box-align-end {
+    align-items: flex-end;
+}
+
+.self-align-center {
+    align-self: center;
+    margin: 0 auto;
+}
+
+.self-align-start {
+    align-self: flex-start;
+}
+
+.self-align-end {
+    align-self: flex-end;
+}
+
+.self-align-stretch {
+    align-self: stretch;
+}
+
+.box-wrap {
+    flex-wrap: wrap;
+}
+
+.box-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex {
+    flex-grow: 1;
+}
+
+.shrink {
+    flex-shrink: 1;
+}
+.bg {
+  background-image: linear-gradient(to bottom, #faefe7, #ffcbd7);
+  overflow: hidden;
+}
+.brown-color {
+  color: #784344;
+}
+.pink-color {
+  color: #ff629a;
+}
+.white-color {
+  color: #fff;
+}
+.fs24 {
+  font-size: 24rpx;
+}
+.fs28 {
+  font-size: 28rpx;
+}
+.fs32 {
+  font-size: 32rpx;
+}
+.fs36 {
+  font-size: 36rpx;
+}
+/* pages/calendar/calendar.wxss */
+.top-handle {
+    height: 80rpx;
+    min-height: 80rpx;
+}
+.prev {
+    text-align: right;
+    height: 80rpx;
+}
+.next {
+    height: 80rpx;
+}
+.prev-handle {
+    width: 80rpx;
+    height: 100%;
+}
+.next-handle {
+    width: 80rpx;
+    height: 100%;
+}
+.date-area {
+    width: 50%;
+    height: 80rpx;
+    text-align: center;
+}
+.weeks {
+    height: 50rpx;
+    line-height: 50rpx;
+    min-height: 50rpx;
+    /* opacity: 0.5 */
+}
+.week {
+    text-align: center;
+    color: #fff;
+    min-height: 50rpx;
+}
+.days {
+    height: 500rpx;
+}
+.grid {
+    width: 107.1428571429rpx;
+    min-height: 80rpx;
+}
+.day {
+    width: 60rpx;
+    height: 60rpx;
+    color: #fff;
+    font-size: 26rpx;
+    font-weight: 200;
+}
+.border-radius {
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    top: 0;
+    color: #fff;
+}
+.pink-bg {
+    background-color: #ffffff;
+    color: #ff606f;
+}
+.purple-bg {
+    background-color: #b8b8f1;
+}
+
+.right-triangle::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15rpx solid transparent;
+    border-left-color: #ff629a;
+    position: absolute;
+    right: -22rpx;
+    top: 18rpx;
+}
+.left-triangle::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15rpx solid transparent;
+    border-right-color: #ff629a;
+    position: absolute;
+    left: -22rpx;
+    top: 18rpx;
+}
+.tips {
+    text-align: center;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+.types {
+    background-color: #ffedf4;
+    height: 50rpx;
+}
+.type-dot {
+    width: 25rpx;
+    height: 25rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+}
+.type-dot-ymq {
+    color:#FF7CA0;
+    background-color: #FF7CA0;
+}
+.type-dot-ycq {
+    color: rgb(255, 200, 202);
+    background-color: rgb(255, 200, 202);
+}
+.type-dot-aqq {
+    color: rgb(118, 191, 92);
+    background-color: rgb(118, 191, 92);
+}
+.type-dot-yyq {
+    color: #FF7CA0;
+    background-color: #FF7CA0;
+}
+.type-dot-plr {
+    color: rgb(211, 189, 215);
+    background-color: rgb(211, 189, 215);
+}
+.types-desc {
+    padding: 0 20rpx;
+}
+.type-name {
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+}
+.type-desc {
+    padding: 0 35rpx;
+    line-height: 38rpx;
+}
+.explain {
+    border-top: 1px solid #eee;
+    width: 90%;
+    margin: 20rpx 5% 20rpx 5%;
+    padding: 20rpx 0;
+}
+.explain-title {
+    font-weight: bold;
+    margin-bottom: 15rpx;
+}
+.explain-item {
+    padding: 8rpx 20rpx;
+    color: #fff;
+}
+.left-border-radius {
+    border-top-left-radius: 20rpx;
+    border-bottom-left-radius: 20rpx;
+}
+.right-border-radius {
+    border-top-right-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+}
+.picker-btns {
+	height: 120rpx;
+	line-height: 120rpx;
+	border-bottom: 1rpx solid #FF7CA0;
+}
+.picker-confirm {
+	margin-right: 50rpx;
+}
+.picker-cancel {
+	margin-left: 50rpx;
+}
+.picker-view {
+	color:#FF7CA0;
+	text-align: center;
+}
+
+.signDay{
+  line-height: 90rpx;
+  font-size: 28rpx;
+  text-align: center;
+  background-color: #ff606f;
+  color: #fff;
+  width: 100%;
+}
+
+.signRecord{
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.signTit{
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 64rpx;
+}
+
+.signList{
+  margin: 0 30rpx;
+  border-bottom: 1px solid #ebebeb;
+}
+.flexlist{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flexlist .dd{
+  font-size: 24rpx;
+  color: #131313;
+}
+.flexlist .num{
+  font-size: 28rpx;
+  color: #ff606f;
+}
+.signList .bot view{
+  font-size: 20rpx;
+  color: #999999;
+  line-height: 54rpx;
+}

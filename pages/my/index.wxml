@@ -3,7 +3,7 @@
   <view class="headTxt">我的</view>
   <view class="search" bindtap="toSearch"><image src="/images/others/search.png"></image>搜索精彩活动</view>
   <view class="notification" bindtap="toNotification">
-    <view><image src="/images/others/notification.png"></image> </view>
+    <view><image src="/images/others/notification-white.png"></image> </view>
     <view>通知</view>
   </view>
 </view>
@@ -11,14 +11,28 @@
 <view class="user-content">
   <view class="user-info d-flex j-between">
     <view class="user-header">
-      <image src="/images/others/demo.jpg"></image>
+      <block wx:if="{{!hasUserInfo}}" >
+        <button class='getHeadIco' open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+        <image src='/images/others/head_default.png'></image>
+      </block>
+      <block wx:else>
+        <image src='{{userInfo.avatarUrl}}'></image>
+      </block>
     </view>
-    <view>
+    <view class="msg">
+    <block wx:if="{{!hasUserInfo}}" >
+      <view class="">请点击头像登录</view>
+    </block>
+    <block wx:else>
       <view class="d-flex j-between">
           <view class="user-name">哪吒爸爸</view>
-          <view class="text-red">31积分</view>
+          <view class="jifen t-red d-flex a-center"> 
+            <image src="/images/others/jifen.png"></image>
+            <text>31积分</text>
+          </view>
       </view>
-      <view class="user-detail">哪吒爸爸爱敖丙！哪吒爸爸爱敖丙！</view>
+      <view class="user-detail t-grey">哪吒爸爸爱敖丙！哪吒爸爸爱敖丙！</view>
+    </block>
     </view>
   </view>
   <view class="order-icon d-flex j-between">
@@ -30,3 +44,7 @@
     <img-icon  imgPath="{{item.imgPath}}" text="{{item.text}}" data-info="{{item}}" bindtap="toIcon"></img-icon>
   </view>
 </view>
+
+<mp-dialog title="提示" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    <view><text>确定拨打电话：</text> <text>187 3989 0000 吗？</text> </view>
+</mp-dialog>

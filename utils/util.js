@@ -13,7 +13,16 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-
+// 判断字符串是否为空
+function isEmpty(value) {
+  if (typeof (value) == "undefined" || value == 'undefined' || value == null)
+    return true;
+  value = (value + '').replace(/(^\s+)|(\s+$)/g, "");
+  if (value == '')
+    return true;
+  return false;
+}
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  isEmpty: isEmpty
 }

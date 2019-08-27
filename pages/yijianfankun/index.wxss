@@ -1,0 +1,19 @@
+/* pages/yijianfankun/index.wxss */
+
+.wp-100{
+  width: 100%
+}
+.w-110{
+  width: 110px;
+}
+.yijian-item{
+  border: 1px solid #ebebeb;
+  border-radius: 20rpx;
+  background: #fff;
+}
+.form-btn{
+  background: #ff606f;
+  color: #fff;
+  border-radius: 100rpx;
+}
+

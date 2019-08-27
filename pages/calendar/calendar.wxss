@@ -182,6 +182,7 @@ page {
 /* pages/calendar/calendar.wxss */
 .top-handle {
     height: 80rpx;
+    min-height: 80rpx;
 }
 .prev {
     text-align: right;
@@ -206,17 +207,20 @@ page {
 .weeks {
     height: 50rpx;
     line-height: 50rpx;
+    min-height: 50rpx;
     /* opacity: 0.5 */
 }
 .week {
     text-align: center;
     color: #fff;
+    min-height: 50rpx;
 }
 .days {
     height: 500rpx;
 }
 .grid {
     width: 107.1428571429rpx;
+    min-height: 80rpx;
 }
 .day {
     width: 60rpx;

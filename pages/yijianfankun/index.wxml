@@ -1,0 +1,15 @@
+<view class="yijian-item m-30 p-30">
+ <textarea placeholder="我们将为您不断改进"></textarea>
+</view>
+
+<view class="yijian-item m-30 p-30 d-flex a-center">
+  <text class="w-110 fw-600">邮箱：</text>
+  <input placeholder="以便我们给您回复"></input>
+</view >
+<view class="yijian-item m-30 p-30 d-flex a-center">
+  <text class="w-110 fw-600">其他：</text>
+  <input placeholder="其他联系方式（微信或手机号）"></input>
+</view>
+<view class="mt-50 px-30">
+  <button class="form-btn">提交留言</button>
+</view>

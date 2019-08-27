@@ -1,0 +1,19 @@
+/* pages/userinfo/index.wxss */
+
+.info-box{
+  border: 1px solid #ebebeb;
+  border-radius: 20rpx;
+  background: #fff;
+  padding: 30rpx;
+}
+.header-img image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius:50%; 
+}
+.addBtn{
+  color: #ff606f;
+  padding: 5rpx 20rpx;
+  border: 1rpx solid #ff606f;
+  border-radius: 26rpx
+}

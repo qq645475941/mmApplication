@@ -1,15 +1,76 @@
+const api = require("../../utils/api.js")
+
 Page({
   data: {
     imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+      '/images/others/banner.png',
+      '/images/others/banner.png',
+      '/images/others/banner.png'
     ],
     indicatorDots: true,
-    indicatorColor: "rgb(255,96,111)",
+    indicatorColor: "rgb(255,255,255)",
+    indicatorActiveColor: "rgb(255,96,111)",
     autoplay: false,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    currentPage:0,
+    newActiveList:[],
+    activeStateMap:{
+      '0':'活动无效',
+      '1':'报名中',
+      '2':'报名结束',
+      '3':'进行中',
+      '4':'活动结束',
+    },
+    isAcEnd:false,
+  },
+
+  onLoad: function (options) {
+    this.ajaxActiveList()
+  },
+
+  onPullDownRefresh() {
+    this.setData({
+      currentPage: 0,
+      newActiveList: [],
+      isAcEnd: false,
+    })
+    this.ajaxActiveList();
+    wx.stopPullDownRefresh()
+  },
+
+  onReachBottom(){
+    if(!this.data.isAcEnd) {
+    console.log('ssss')
+      this.ajaxActiveList();
+    }
+  },
+
+
+  ajaxActiveList:function(){
+    api.http('get', `${this.data.currentPage}/gainActivity`).then(res => {
+      if (res.result == 0) {
+        if(res.obj.length) {
+          let data = res.obj.map(item => {
+            item.cover = JSON.parse(item.cover || '[]');
+            item.startDate = item.startDate.split(' ')[0];
+            item.endDate = item.endDate.split(' ')[0];
+            return item;
+          })
+          data = [...this.data.newActiveList,...data];
+          let page = this.data.currentPage + 1;
+          this.setData({
+            newActiveList: data,
+            isAcEnd:false,
+            currentPage: page
+          })
+        } else {
+          this.setData({
+            isAcEnd: true
+          })
+        }
+      }
+    })
   },
   changeIndicatorDots: function (e) {
     this.setData({
@@ -46,4 +107,24 @@ Page({
       url: '/pages/notification/notification',
     })
   },
+  toSign:function(){
+    wx.navigateTo({
+      url: '/pages/signIn/signIn',
+    })
+  },
+  toCollect:function(){
+    wx.navigateTo({
+      url: '/pages/activeShoucang/index',
+    })
+  },
+  handleScan:function(){
+    wx.scanCode({
+      onlyFromCamera: true,
+      success(res) {
+        wx.showToast({
+          title: '扫描二维码',
+        })
+      }
+    })
+  }
 })

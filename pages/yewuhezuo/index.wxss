@@ -1,0 +1,15 @@
+.form-box{
+  background: #fff;
+  border-radius: 20rpx;
+
+}
+
+.form-btn{
+  background: #ff606f;
+  color: #fff;
+  border-radius: 100rpx;
+}
+
+.w-190{
+  width: 190rpx;
+}

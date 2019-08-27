@@ -25,6 +25,9 @@
 .mt-20{
   margin-top: 20rpx;
 }
+.mt-30{
+  margin-top: 30rpx;
+}
 .mx-20{
   margin-left: 20rpx;
   margin-right: 20rpx;
@@ -32,6 +35,26 @@
 .mx-30{
   margin-left: 30rpx;
   margin-right: 30rpx;
+}
+.m-30 {
+  margin: 30rpx;
+}
+.p-30{
+  padding: 30rpx;
+}
+.px-30{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.py-30{
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.mt-50{
+  margin-top: 50px;
+}
+.b-box{
+  box-sizing: border-box;
 }
 
 
@@ -50,9 +73,15 @@
 .a-center{
   align-items: center;
 }
+.flex-auto{
+  flex: 1 1 auto;
+}
 
 .t-center{
   text-align: center;
+}
+.t-right{
+  text-align: right;
 }
 .t-black{
   color: #000;
@@ -62,4 +91,8 @@
 }
 .t-red{
   color:#ff606f;
+}
+
+.border-bottom-light{
+  border-bottom: 1px solid #ebebeb;
 }
