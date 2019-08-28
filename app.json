@@ -28,9 +28,7 @@
     "navigationBarTitleText": "妈妈应用亲子活动",
     "backgroundColor": "#f8f8f8",
     "navigationBarBackgroundColor": "#ff606e",
-    "navigationStyle": "default",
-    "enablePullDownRefresh": true,
-    "onReachBottomDistance": 50
+    "navigationStyle": "default"
   },
   "tabBar": {
     "color": "#131313",

@@ -1,11 +1,11 @@
 <view class="list">
-  <view class="listL"><image src="/images/others/demo.jpg"></image></view>
+  <view class="listL"><image src="{{item.cover}}"></image></view>
   <view class="listR">
-    <view>{{listData.info}}</view>
-    <view class="time">2019-08-02  至  2019-08-02</view>
+    <view>【{{item.title}}】{{item.attention}}</view>
+    <view class="time">{{item.startDate}}  至  {{item.endDate}}</view>
     <view class="lRBot">
-      <view>免费</view> 
-      <button class="{{listData.type}}">{{listData.btn}}</button>
+      <view>{{item.amount == 0 ? '免费': item.amount}}</view> 
+      <button class="{{stateMap[item.activityStatus].type}}">{{stateMap[item.activityStatus].btn}}</button>
     </view>
   </view>
 </view>

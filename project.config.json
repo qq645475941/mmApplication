@@ -22,8 +22,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.7.7",
-	"appid": "wxd3f747f2e1dd9666",
-	"projectname": "mmApplication",
+	"appid": "wx6040cb3ee0c41dcb",
+	"projectname": "mm_application_wx",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

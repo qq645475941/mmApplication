@@ -23,6 +23,7 @@ Page({
       '4':'活动结束',
     },
     isAcEnd:false,
+    isLoading:false,
   },
 
   onLoad: function (options) {
@@ -41,13 +42,18 @@ Page({
 
   onReachBottom(){
     if(!this.data.isAcEnd) {
-    console.log('ssss')
       this.ajaxActiveList();
     }
   },
 
 
   ajaxActiveList:function(){
+    if (this.data.isLoading) {
+      return;
+    }
+    this.setData({
+      isLoading:true,
+    })
     api.http('get', `${this.data.currentPage}/gainActivity`).then(res => {
       if (res.result == 0) {
         if(res.obj.length) {
@@ -66,10 +72,13 @@ Page({
           })
         } else {
           this.setData({
-            isAcEnd: true
+            isAcEnd: true,
           })
         }
       }
+      this.setData({
+        isLoading: false
+      })
     })
   },
   changeIndicatorDots: function (e) {

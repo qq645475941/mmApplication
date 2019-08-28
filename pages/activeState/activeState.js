@@ -8,62 +8,45 @@ Page({
   data: {
     currentTab: 'all',
     headerTab: [
-      { name: '全部', type: 'all' },
-      { name: '待开始', type: 'ready' },
-      { name: '进行中', type: 'doing' },
-      { name: '已结束', type: 'complated' }
+      { name: '全部', type: '全部' },
+      { name: '待开始', type: '待开始' },
+      { name: '进行中', type: '进行中' },
+      { name: '已结束', type: '已结束' }
     ],
     activeList:[],
-    apiData:[
-      { info:'【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn:'待开始',type:'ready',},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '进行中', type: 'doing', },
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '已结束', type: 'complated',},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '待开始', type: 'ready',},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '进行中', type: 'doing',},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '已结束', type: 'complated',},
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '待开始', type: 'ready', },
-      { info: '【青山湖区】孔明灯亲子放灯，免费畅玩，祭祀祈福，怀念先人~', btn: '进行中', type: 'doing',},
-    ]
   },
-  filterListData(){
-    if(this.data.currentTab !== 'all') {
-      let data = this.data.apiData.filter(item => {
-        return item.type == this.data.currentTab;
-      })
-      this.setData({
-        activeList:data
-      })
-    } else {
-      this.setData({
-        activeList:this.data.apiData
-      })
-    }
-  },
-
   changeTab(e){
     let tabData = e.currentTarget.dataset.tab;
     this.setData({
       currentTab: tabData.type,
     })
-    this.filterListData();
+    this.getListByapi();
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
     this.setData({
       currentTab: options.type
     })
     this.getListByapi();
-    this.filterListData();
   },
 
   getListByapi(){
-    let url = `120/gainActivityConcern`
+    let userId = 120
+    let url = `${userId}/${this.data.currentTab}/gainActivityJoin`
     http('get', url).then(res => {
       console.log(res);
+      if (res.result == 0) {
+        this.setData({
+          activeList: res.obj
+        })
+      } else {
+        this.setData({
+          activeList: []
+        })
+      }
     });
   },
 

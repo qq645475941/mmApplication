@@ -1,22 +1,16 @@
-/*
- * @Author: TerryMin
- * @Date: 2019-08-28 09:04:03
- * @LastEditors: TerryMin
- * @LastEditTime: 2019-08-28 09:23:41
- * @Description: file not
- */
 const app = getApp()
-const util = require('../../utils/util.js')
+const util = require('../../utils/util.js');
+const { http } = require('../../utils/api.js');
 Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     orderInon:[
-      { imgPath: "/images/activity/activity.png", text: "全部",link: "?type=all"},
-      { imgPath: "/images/activity/activity.png", text: "待开始", link: "?type=ready"},
-      { imgPath: "/images/activity/activity.png", text: "进行中", link: "?type=doing"},
-      { imgPath: "/images/activity/activity.png", text: "已结束", link: "?type=complated"},
+      { imgPath: "/images/activity/activity.png", text: "全部", link: "?type=全部"},
+      { imgPath: "/images/activity/activity.png", text: "待开始", link: "?type=待开始"},
+      { imgPath: "/images/activity/activity.png", text: "进行中", link: "?type=进行中"},
+      { imgPath: "/images/activity/activity.png", text: "已结束", link: "?type=已结束"},
     ],
     myInon:[
       { imgPath: "/images/others/rili.png", text: "活动日历", link: "/pages/calendar/calendar"},
@@ -27,7 +21,7 @@ Page({
       { imgPath: "/images/others/kefu.png", text: "联系客服",link: "dialogModal"},
       { imgPath: "/images/others/scan.png", text: "扫描二维码",link: "scanCode"},
       { imgPath: "/images/others/qiandao.png", text: "签到", link: "/pages/signIn/signIn"},
-      { imgPath: "/images/others/gzh.png", text: "关注公众号",link: "/pages/official-account/index"},
+      { imgPath: "/images/others/gzh.png", text: "关注公众号", link: "/pages/official-account/index"},
       { imgPath: "/images/others/headIcon.png", text: "业务合作", link: "/pages/yewuhezuo/index"},
       { imgPath: "/images/others/guanyu.png", text: "关于我们", link: "/pages/aboutMe/index"},
       { imgPath: "/images/others/yijian.png", text: "意见反馈", link: "/pages/yijianfankun/index"},
@@ -55,6 +49,7 @@ Page({
         }
       })
     }
+    http('get','oxDGv4v3KDex3laEUYrGxj4f32fM/gainMotherUserChild')
   },
   // 获取用户信息
   getUserInfo: function (e) {
@@ -83,7 +78,11 @@ Page({
   onHide: function () {
 
   },
-
+  toNotification(){
+    wx.navigateTo({
+      url: '/pages/notification/notification',
+    })
+  },
   toActive: function (e) {
     let data = e.currentTarget.dataset.info
     wx.navigateTo({
