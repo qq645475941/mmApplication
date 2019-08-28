@@ -1,0 +1,6 @@
+dist/
+project.config.json
+.temp/
+.rn_temp/
+node_modules/
+package-lock*

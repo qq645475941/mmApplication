@@ -16,8 +16,8 @@
     "pages/yewuhezuo/index",
     "pages/yijianfankun/index",
     "pages/aboutMe/index",
-    "pages/userinfo/index"
-    
+    "pages/userinfo/index",
+    "pages/official-account/index"
   ],
   "usingComponents": {
     "empty": "/components/empty/index",

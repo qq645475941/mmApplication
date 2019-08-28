@@ -1,0 +1,14 @@
+<view class="header">
+  <view class="header-one">妈妈应用+</view>
+  <view class="header-two">为你提供高质量的亲子陪伴资源</view>
+</view>
+<view class="code-container">
+  <view class="code-item" wx:for="{{codeContent}}" wx:key="item.keyWord">
+    <view class="code-img">
+      <image src="{{item.imgUrl}}" wx:if="{{item.imgUrl}}" style="width: 300rpx;height: 300rpx;"></image>
+    </view>
+    <view class="code-desc">{{item.description}}</view>
+    <view class="code-key">{{item.keyWord}}</view>
+    <button class="btn" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">一键复制</button>
+  </view>
+</view>

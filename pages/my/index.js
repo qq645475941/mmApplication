@@ -1,3 +1,10 @@
+/*
+ * @Author: TerryMin
+ * @Date: 2019-08-28 09:04:03
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2019-08-28 09:23:41
+ * @Description: file not
+ */
 const app = getApp()
 const util = require('../../utils/util.js')
 Page({
@@ -20,7 +27,7 @@ Page({
       { imgPath: "/images/others/kefu.png", text: "联系客服",link: "dialogModal"},
       { imgPath: "/images/others/scan.png", text: "扫描二维码",link: "scanCode"},
       { imgPath: "/images/others/qiandao.png", text: "签到", link: "/pages/signIn/signIn"},
-      { imgPath: "/images/others/gzh.png", text: "关注公众号",link: ""},
+      { imgPath: "/images/others/gzh.png", text: "关注公众号",link: "/pages/official-account/index"},
       { imgPath: "/images/others/headIcon.png", text: "业务合作", link: "/pages/yewuhezuo/index"},
       { imgPath: "/images/others/guanyu.png", text: "关于我们", link: "/pages/aboutMe/index"},
       { imgPath: "/images/others/yijian.png", text: "意见反馈", link: "/pages/yijianfankun/index"},
