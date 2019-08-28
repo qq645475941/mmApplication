@@ -17,6 +17,7 @@
     "pages/yijianfankun/index",
     "pages/aboutMe/index",
     "pages/userinfo/index"
+    
   ],
   "usingComponents": {
     "empty": "/components/empty/index",
@@ -28,8 +29,8 @@
     "backgroundColor": "#f8f8f8",
     "navigationBarBackgroundColor": "#ff606e",
     "navigationStyle": "default",
-    "enablePullDownRefresh":true,
-    "onReachBottomDistance":50
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
   },
   "tabBar": {
     "color": "#131313",
