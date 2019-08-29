@@ -3,11 +3,11 @@
   <view class="info-box mt-30">
     <view class="d-flex a-center j-between border-bottom-light py-30">
       <view class="t-grey">头像</view>
-      <view class="header-img"><image src="/images/others/demo.jpg"></image></view>
+      <view class="header-img"><image src="{{userInfo.avatarUrl}}"></image></view>
     </view>
     <view class="d-flex a-center j-between border-bottom-light py-30">
       <view class="t-grey">昵称</view>
-      <view class="flex-auto t-right"><input placeholder="请填写您的昵称（XX爸爸/妈妈）"></input></view>
+      <view class="flex-auto t-right"><input placeholder="请填写您的昵称（XX爸爸/妈妈）" bindinput="handleNickName"></input></view>
     </view>
     <view class="d-flex a-center j-between border-bottom-light py-30">
       <view class="t-grey">手机号码</view>

@@ -52,7 +52,7 @@
       <view class="right-content">{{item.tips}}</view>
     </view>
   </view>
-  <view class="look-more">查看更多 ></view>
+  <!-- <view class="look-more">查看更多 ></view> -->
 </view>
 <view class="footer">
   <view class="footer-img">

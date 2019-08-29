@@ -17,7 +17,7 @@ Page({
       { imgPath: "/images/others/shoucang.png", text: "活动收藏", link: "/pages/activeShoucang/index"},
       { imgPath: "/images/others/guanzhu.png", text: "我的关注", link: "/pages/myAttention/index"},
       { imgPath: "/images/others/jifen.png", text: "我的积分", link: "/pages/myIntegral/index"},
-      { imgPath: "/images/others/shanghu.png", text: "商户入口", link: "/pages/shanghu/index"},
+      { imgPath: "/images/others/shanghu.png", text: "个人资料", link: "/pages/userinfo/index"},
       { imgPath: "/images/others/kefu.png", text: "联系客服",link: "dialogModal"},
       { imgPath: "/images/others/scan.png", text: "扫描二维码",link: "scanCode"},
       { imgPath: "/images/others/qiandao.png", text: "签到", link: "/pages/signIn/signIn"},
@@ -33,6 +33,7 @@ Page({
   },
   onLoad: function (options) {
     if (app.globalData.userInfo) {
+      console.log(app.globalData.userInfo)
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true

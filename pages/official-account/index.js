@@ -1,10 +1,4 @@
-/*
- * @Author: TerryMin
- * @Date: 2019-08-28 14:03:17
- * @LastEditors: TerryMin
- * @LastEditTime: 2019-08-29 09:00:55
- * @Description: file not
- */
+// pages/notification/notification.js
 Page({
 
   /**

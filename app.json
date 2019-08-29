@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/my/index",
     "pages/activity/index",
+    "pages/activity-detail/index",
     "pages/calendar/calendar",
     "pages/notification/notification",
     "pages/search/search",
@@ -17,8 +18,7 @@
     "pages/yijianfankun/index",
     "pages/aboutMe/index",
     "pages/userinfo/index",
-    "pages/official-account/index",
-    "pages/activity-detail/index"
+    "pages/official-account/index"
   ],
   "usingComponents": {
     "empty": "/components/empty/index",
