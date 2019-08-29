@@ -9,15 +9,15 @@
   <view class="header-one">{{title}}</view>
   <view class="header-two">
     <view class="look-collect">
-      <text class="look">{{lookNumber}}</text>
-      <text class="collect">{{collectNumber}}</text>
+      <text class="look">浏览 {{lookNumber}}</text>
+      <text class="collect">收藏 {{collectNumber}}</text>
     </view>
     <view class="attention">关注商家</view>
   </view>
   <view class="header-two">
     <view class="price-state">
       <text class="free-price">免费</text>
-      <text class="state">活动结束</text>
+      <text class="state-end">活动结束</text>
       <!-- <text class="price">{{lookNumber}}</text> -->
     </view>
     <view class="free-join">共{{applyNumber}}人参加</view>
@@ -35,7 +35,24 @@
       <view class="left-subject">活动时间</view>
       <view class="right-content">{{item.activityTime}}</view>
     </view>
+    <view class="item-row">
+      <view class="left-subject">活动地点</view>
+      <view class="right-content">{{item.address}}</view>
+    </view>
+    <view class="item-row">
+      <view class="left-subject">活动人数</view>
+      <view class="right-content">{{item.peopleNumber}}</view>
+    </view>
+    <view class="item-row">
+      <view class="left-subject">活动主办方</view>
+      <view class="right-content hoster">{{item.hoster}}</view>
+    </view>
+    <view class="item-row">
+      <view class="left-subject">温馨提示</view>
+      <view class="right-content">{{item.tips}}</view>
+    </view>
   </view>
+  <view class="look-more">查看更多 ></view>
 </view>
 <view class="footer">
   <view class="footer-img">
