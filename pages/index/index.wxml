@@ -44,7 +44,7 @@
 <view class="title"><text class="bar"></text>最新活动</view>
 
 <!-- 列表 -->
-<view class="list" wx:key="{{item}}" wx:for="{{newActiveList}}" bindtap="goActivity">
+<view class="list" wx:key="{{item}}" wx:for="{{newActiveList}}" bindtap="goActivity" data-item="{{item}}">
   <view class="listL"><image src="{{item.cover && item.cover[0]?item.cover[0]:'/images/others/demo.jpg'}}"></image></view>
   <view class="listR">
     <view>【{{item.title}}】{{item.attention}}</view>

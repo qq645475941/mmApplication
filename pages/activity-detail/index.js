@@ -2,9 +2,10 @@
  * @Author: TerryMin
  * @Date: 2019-08-28 14:03:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2019-08-29 11:19:23
+ * @LastEditTime: 2019-08-29 21:22:27
  * @Description: file not
  */
+const api = require("../../utils/api.js")
 Page({
 
   /**
@@ -27,6 +28,7 @@ Page({
     lookNumber: 282,
     collectNumber: 82,
     applyNumber: 59,
+    activityItem: {},
     detailList: [
       {
         ageRange: '0 - 12',
@@ -57,6 +59,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let activityItem = wx.getStorageSync('activityItem');
+    console.log(activityItem);
+    if (activityItem) {
+      this.setData({
+        activityItem
+      });
+      wx.clearStorageSync('activityItem')
+    }
 
   },
 
@@ -97,5 +107,33 @@ Page({
 
   goPage: function () {
 
+  },
+  payAttention: function () {
+    api.http('post', `/insertActivityConcern`, { userId, activityId }).then(res => {
+      if (res.result == 0) {
+        if (res.obj.length) {
+          let data = res.obj.map(item => {
+            item.cover = JSON.parse(item.cover || '[]');
+            item.startDate = item.startDate.split(' ')[0];
+            item.endDate = item.endDate.split(' ')[0];
+            return item;
+          })
+          data = [...this.data.newActiveList, ...data];
+          let page = this.data.currentPage + 1;
+          this.setData({
+            newActiveList: data,
+            isAcEnd: false,
+            currentPage: page
+          })
+        } else {
+          this.setData({
+            isAcEnd: true,
+          })
+        }
+      }
+      this.setData({
+        isLoading: false
+      })
+    })
   }
 })
