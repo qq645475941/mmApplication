@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2019-08-28 14:03:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2019-08-29 21:22:27
+ * @LastEditTime: 2019-08-29 21:24:55
  * @Description: file not
  */
 const api = require("../../utils/api.js")
@@ -67,7 +67,6 @@ Page({
       });
       wx.clearStorageSync('activityItem')
     }
-
   },
 
   /**
