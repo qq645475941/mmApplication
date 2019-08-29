@@ -1,3 +1,10 @@
+/*
+ * @Author: TerryMin
+ * @Date: 2019-08-29 08:44:57
+ * @LastEditors: TerryMin
+ * @LastEditTime: 2019-08-29 09:26:42
+ * @Description: file not
+ */
 const api = require("../../utils/api.js")
 
 Page({
@@ -13,17 +20,17 @@ Page({
     autoplay: false,
     interval: 5000,
     duration: 1000,
-    currentPage:0,
-    newActiveList:[],
-    activeStateMap:{
-      '0':'活动无效',
-      '1':'报名中',
-      '2':'报名结束',
-      '3':'进行中',
-      '4':'活动结束',
+    currentPage: 0,
+    newActiveList: [],
+    activeStateMap: {
+      '0': '活动无效',
+      '1': '报名中',
+      '2': '报名结束',
+      '3': '进行中',
+      '4': '活动结束',
     },
-    isAcEnd:false,
-    isLoading:false,
+    isAcEnd: false,
+    isLoading: false,
   },
 
   onLoad: function (options) {
@@ -40,34 +47,34 @@ Page({
     wx.stopPullDownRefresh()
   },
 
-  onReachBottom(){
-    if(!this.data.isAcEnd) {
+  onReachBottom() {
+    if (!this.data.isAcEnd) {
       this.ajaxActiveList();
     }
   },
 
 
-  ajaxActiveList:function(){
+  ajaxActiveList: function () {
     if (this.data.isLoading) {
       return;
     }
     this.setData({
-      isLoading:true,
+      isLoading: true,
     })
     api.http('get', `${this.data.currentPage}/gainActivity`).then(res => {
       if (res.result == 0) {
-        if(res.obj.length) {
+        if (res.obj.length) {
           let data = res.obj.map(item => {
             item.cover = JSON.parse(item.cover || '[]');
             item.startDate = item.startDate.split(' ')[0];
             item.endDate = item.endDate.split(' ')[0];
             return item;
           })
-          data = [...this.data.newActiveList,...data];
+          data = [...this.data.newActiveList, ...data];
           let page = this.data.currentPage + 1;
           this.setData({
             newActiveList: data,
-            isAcEnd:false,
+            isAcEnd: false,
             currentPage: page
           })
         } else {
@@ -101,32 +108,41 @@ Page({
       duration: e.detail.value
     })
   },
-  toSearch:function(e){
+  toSearch: function (e) {
     wx.navigateTo({
       url: '/pages/search/search',
     })
   },
-  toActive:function(){
+  toActive: function () {
     wx.navigateTo({
       url: '/pages/calendar/calendar',
     })
   },
-  toNotification:function(){
+  toNotification: function () {
     wx.navigateTo({
       url: '/pages/notification/notification',
     })
   },
-  toSign:function(){
+  toSign: function () {
     wx.navigateTo({
       url: '/pages/signIn/signIn',
     })
   },
-  toCollect:function(){
+  goHome: function () {
+    console.log(555);
+  },
+  toCollect: function () {
     wx.navigateTo({
       url: '/pages/activeShoucang/index',
     })
   },
-  handleScan:function(){
+  goActivity: function () {
+    console.log(323);
+    wx.navigateTo({
+      url: '/pages/activity-detail/index',
+    })
+  },
+  handleScan: function () {
     wx.scanCode({
       onlyFromCamera: true,
       success(res) {

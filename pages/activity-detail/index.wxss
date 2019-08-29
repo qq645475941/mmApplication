@@ -1,0 +1,154 @@
+page {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+swiper {
+  height: 300rpx;
+}
+
+.header {
+  padding: 25rpx;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.header-one {
+  font-size: 30rpx;
+  font-weight: 500;
+  margin-top: 15rpx;
+}
+
+.header-two {
+  display: flex;
+  justify-content: space-between;
+}
+
+.look::before {
+  content: '浏览';
+  font-size: 15rpx;
+  color: gray;
+}
+
+.collect::before {
+  content: '收藏';
+  font-size: 15rpx;
+  color: gray;
+}
+
+.attention {
+  height: 40rpx;
+  color: #FFF;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  padding: 5rpx 8rpx;
+  letter-spacing: 5rpx;
+  background-color: red;
+}
+
+.free-price {
+  font-size: 35rpx;
+  color: red;
+}
+
+.free-join {
+  font-size: 20rpx;
+  color: gray;
+}
+
+.state-end {
+  height: 40rpx;
+  color: gray;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  padding: 5rpx 8rpx;
+  letter-spacing: 5rpx;
+  border: 1rpx solid gray;
+}
+
+.main {
+  border-top: 10rpx solid #EBEBEB;
+  /* margin-top: 20rpx; */
+  padding: 25rpx;
+}
+
+.activity-item {
+  width: 100%;
+  height: auto;
+  border: 1rpx solid red;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-top: 25rpx;
+}
+
+.headline {
+  text-align: center;
+  color: #333;
+  font-weight: 400;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+}
+
+.left-subject {
+  color: #333;
+  font-size: 25rpx;
+  font-weight: 400;
+  margin-right: 30rpx;
+}
+
+.left-subject::before {
+  color: red;
+  content: '|';
+  font-weight: 500px;
+  margin-right: 8rpx;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100rpx;
+  border-top: 2rpx solid #F6F6F6;
+  padding: 10rpx 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.footer-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-text {
+  color: #333;
+  font-size: 25rpx;
+  margin-top: 8rpx;
+}
+
+.btn {
+  width: 360rpx;
+  height: 60rpx;
+  color: #FFFFFF;
+  background-color: #FF606F;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 60rpx;
+  font-size: 30rpx;
+  letter-spacing: 5rpx;
+  display: inline-block;
+
+}

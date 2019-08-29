@@ -1,0 +1,50 @@
+<view class="header">
+  <swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color='{{indicatorActiveColor}}' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="header-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="header-one">{{title}}</view>
+  <view class="header-two">
+    <view class="look-collect">
+      <text class="look">{{lookNumber}}</text>
+      <text class="collect">{{collectNumber}}</text>
+    </view>
+    <view class="attention">关注商家</view>
+  </view>
+  <view class="header-two">
+    <view class="price-state">
+      <text class="free-price">免费</text>
+      <text class="state">活动结束</text>
+      <!-- <text class="price">{{lookNumber}}</text> -->
+    </view>
+    <view class="free-join">共{{applyNumber}}人参加</view>
+    <!-- <view class="attention">{{applyNumber}}人已报名</view> -->
+  </view>
+</view>
+<view class="main">
+  <view class="activity-item" wx:for="{{detailList}}" wx:key="item">
+    <view class="headline">亲子涂鸦活动详情</view>
+    <view class="item-row">
+      <view class="left-subject">参加年龄</view>
+      <view class="right-content">{{item.ageRange}} 岁</view>
+    </view>
+    <view class="item-row">
+      <view class="left-subject">活动时间</view>
+      <view class="right-content">{{item.activityTime}}</view>
+    </view>
+  </view>
+</view>
+<view class="footer">
+  <view class="footer-img">
+    <image src="{{'/images/others/kefu.png'}}" style="width: 35rpx;height: 35rpx;"></image>
+    <view class="img-text">客服</view>
+  </view>
+  <view class="footer-img">
+    <image src="{{'/images/others/shoucang.png'}}" style="width: 35rpx;height: 35rpx;"></image>
+    <view class="img-text">收藏</view>
+  </view>
+  <button class="btn" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">已报名</button>
+</view>

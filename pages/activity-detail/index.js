@@ -2,7 +2,7 @@
  * @Author: TerryMin
  * @Date: 2019-08-28 14:03:17
  * @LastEditors: TerryMin
- * @LastEditTime: 2019-08-29 09:00:55
+ * @LastEditTime: 2019-08-29 11:19:23
  * @Description: file not
  */
 Page({
@@ -11,11 +11,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    codeContent: [
-      { imgUrl: '/images/ncmmyy.png', description: '南昌妈妈应用订阅号', keyWord: 'ncmmyy' },
-      { imgUrl: '/images/ncqzblh.png', description: '亲子博览会服务号', keyWord: 'ncqzblh' },
-      { imgUrl: '/images/mmyy-app.png', description: '妈妈应用服务号', keyWord: 'mmyy-app' },
-      { imgUrl: '/images/china86qu.png', description: '南昌有嘻哈服务号', keyWord: 'china86qu' },
+    imgUrls: [
+      '/images/others/banner.png',
+      '/images/others/banner.png',
+      '/images/others/banner.png'
+    ],
+    indicatorDots: true,
+    indicatorColor: "rgb(255,255,255)",
+    indicatorActiveColor: "rgb(255,96,111)",
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
+    currentPage: 0,
+    title: '积木宝贝大型亲子涂鸦——创意联展门票来砍价啦~',
+    lookNumber: 282,
+    collectNumber: 82,
+    applyNumber: 59,
+    detailList: [
+      {
+        ageRange: '0 - 12',
+        activityTime: '2019-08-19至2019-08-23',
+        address: '积木宝贝IM盈石中心/积木宝贝新建中心',
+        peopleNumber: '人数不限',
+        hoster: '积木宝贝科学早教',
+        tips: '如有疑问,请点击页面左下角"客服"进行咨询'
+      }
     ]
   },
 
@@ -72,6 +92,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+
+  },
+
+  goPage: function () {
 
   }
 })
