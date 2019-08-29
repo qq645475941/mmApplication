@@ -1,57 +1,55 @@
 <view class="header">
   <swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color='{{indicatorActiveColor}}' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{activityItem.cover}}">
       <swiper-item>
         <image src="{{item}}" class="header-image" width="355" height="150" />
       </swiper-item>
     </block>
   </swiper>
-  <view class="header-one">{{title}}</view>
+  <view class="header-one">{{activityItem.title}}</view>
   <view class="header-two">
     <view class="look-collect">
       <text class="look">浏览 {{lookNumber}}</text>
       <text class="collect">收藏 {{collectNumber}}</text>
     </view>
-    <view class="attention" bindtap="payAttention">关注商家</view>
+    <view class="attention" bindtap="guanzhushangjai">关注商家</view>
   </view>
   <view class="header-two">
     <view class="price-state">
-      <text class="free-price">免费</text>
-      <text class="state-end">活动结束</text>
+      <text class="free-price">{{activityItem.amount == 0 ? '免费': activityItem.amount}}</text>
+      <text class="state-end">{{activeStateMap[activityItem.activityStatus]}}</text>
       <!-- <text class="price">{{lookNumber}}</text> -->
     </view>
-    <view class="free-join">共{{applyNumber}}人参加</view>
+    <view class="free-join">共{{activityItem.personCount}}人参加</view>
     <!-- <view class="attention">{{applyNumber}}人已报名</view> -->
   </view>
 </view>
 <view class="main">
-  <view class="activity-item" wx:for="{{detailList}}" wx:key="item">
-    <view class="header-title">
-      <label class="headline">亲子涂鸦活动详情</label>
-    </view>
+  <view class="activity-item">
+    <view class="headline">活动详情</view>
     <view class="item-row">
       <view class="left-subject">参加年龄</view>
-      <view class="right-content">{{item.ageRange}} 岁</view>
+      <view class="right-content">0-12 岁</view>
     </view>
     <view class="item-row">
       <view class="left-subject">活动时间</view>
-      <view class="right-content">{{item.activityTime}}</view>
+      <view class="right-content">{{activityItem.startDate}} 至 {{activityItem.endDate}}</view>
     </view>
     <view class="item-row">
       <view class="left-subject">活动地点</view>
-      <view class="right-content">{{item.address}}</view>
+      <view class="right-content">{{activityItem.address}}</view>
     </view>
     <view class="item-row">
       <view class="left-subject">活动人数</view>
-      <view class="right-content">{{item.peopleNumber}}</view>
+      <view class="right-content">{{activityItem.personCount == 0 ? '人数不限':activityItem.personCount+'人' }}</view>
     </view>
     <view class="item-row">
       <view class="left-subject">活动主办方</view>
-      <view class="right-content hoster">{{item.hoster}}</view>
+      <view class="right-content hoster">{{activityItem.creatorName}}</view>
     </view>
     <view class="item-row">
       <view class="left-subject">温馨提示</view>
-      <view class="right-content">{{item.tips}}</view>
+      <view class="right-content">{{activityItem.attention}}</view>
     </view>
   </view>
   <!-- <view class="look-more">查看更多 ></view> -->
@@ -63,7 +61,7 @@
   </view>
   <view class="footer-img">
     <image src="{{'/images/others/shoucang.png'}}" style="width: 35rpx;height: 35rpx;"></image>
-    <view class="img-text">收藏</view>
+    <view class="img-text" bindtap="shoucang">收藏</view>
   </view>
-  <button class="btn" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">已报名</button>
+  <button class="btn" loading="{{loading}}" disabled="{{activityItem.activityStatus !==1}}" bindtap="baoming">{{activeStateMap[activityItem.activityStatus]}}</button>
 </view>

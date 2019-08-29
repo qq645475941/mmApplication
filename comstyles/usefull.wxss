@@ -36,6 +36,10 @@
   margin-left: 30rpx;
   margin-right: 30rpx;
 }
+.my-30{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
 .m-30 {
   margin: 30rpx;
 }

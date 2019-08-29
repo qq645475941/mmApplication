@@ -17,3 +17,9 @@
   border: 1rpx solid #ff606f;
   border-radius: 26rpx
 }
+
+.form-btn{
+  background: #ff606f;
+  color: #fff;
+  border-radius: 100rpx;
+}

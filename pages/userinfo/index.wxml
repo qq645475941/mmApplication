@@ -43,3 +43,7 @@
       <view class="mt-30 t-center t-red"> 删除</view>
    </view>
 </view>
+
+<view class="my-30 px-30">
+  <button class="form-btn" bindtap="saveUserinfo">保存</button>
+</view>

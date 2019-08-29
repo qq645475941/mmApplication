@@ -50,7 +50,7 @@ Page({
         }
       })
     }
-    http('get','oxDGv4v3KDex3laEUYrGxj4f32fM/gainMotherUserChild')
+    // http('get','oxDGv4v3KDex3laEUYrGxj4f32fM/gainMotherUserChild')
   },
   // 获取用户信息
   getUserInfo: function (e) {

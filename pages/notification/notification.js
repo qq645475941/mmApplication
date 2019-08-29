@@ -37,7 +37,7 @@ Page({
   },
 
   getDataByapi(){
-    let userId = 120;
+    let userId = getApp().globalData.motherId;
     let url = `${userId}/gainActivityNotice`;
     http('get',url).then(res => {
       if(res.result == 0) {

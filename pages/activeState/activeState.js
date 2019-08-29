@@ -34,7 +34,7 @@ Page({
   },
 
   getListByapi(){
-    let userId = 120
+    let userId = getApp().globalData.motherId
     let url = `${userId}/${this.data.currentTab}/gainActivityJoin`
     http('get', url).then(res => {
       console.log(res);

@@ -45,7 +45,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let activityItem = wx.getStorageSync('activityItem');
+    console.log(activityItem);
+    if (activityItem) {
+      this.setData({
+        activityItem
+      });
+      wx.clearStorageSync('activityItem')
+    }
   },
 
   /**
@@ -59,14 +66,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let activityItem = wx.getStorageSync('activityItem');
-    console.log(activityItem);
-    if (activityItem) {
-      this.setData({
-        activityItem
-      });
-      wx.clearStorageSync('activityItem')
-    }
+    // let activityItem = wx.getStorageSync('activityItem');
+    // console.log(activityItem);
+    // if (activityItem) {
+    //   this.setData({
+    //     activityItem
+    //   });
+    //   wx.clearStorageSync('activityItem')
+    // }
   },
 
   /**

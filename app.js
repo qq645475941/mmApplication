@@ -33,6 +33,7 @@ App({
     openId:'',
     userInfo:'',
     version: '1.0.0', // 版本号
+    motherId:'1',
     apiServer:'https://wechat.mamayy.com/mother/',
   },
   // 获取地理位置
