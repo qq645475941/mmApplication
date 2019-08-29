@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/activity-detail/index",
     "pages/index/index",
     "pages/my/index",
     "pages/activity/index",
@@ -18,7 +17,8 @@
     "pages/yijianfankun/index",
     "pages/aboutMe/index",
     "pages/userinfo/index",
-    "pages/official-account/index"
+    "pages/official-account/index",
+    "pages/activity-detail/index"
   ],
   "usingComponents": {
     "empty": "/components/empty/index",
